@@ -1,0 +1,29 @@
+@font-face{
+    font-family: "regular";
+    src: url('fonte/Sitka-regular.ttc');
+}
+
+@font-face{
+    font-family: "bold";
+    src: url('fonte/Sitka-bold.ttc');
+}
+
+@font-face{
+    font-family: "italico";
+    src: url('fonte/Sitka-italic.ttc');
+}
+
+@font-face{
+    font-family: "italico-bold";
+    src: url('fonte/Sitka-italic-bold.ttc');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "regular"; 
+}
+
+span{
+    font-family: "Sitka";
+}
