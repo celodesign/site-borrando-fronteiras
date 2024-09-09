@@ -1,29 +1,361 @@
 @font-face{
     font-family: "regular";
-    src: url('fonte/Sitka-regular.ttc');
+    src: url('../fonte/Sitka-regular.ttc');
 }
 
 @font-face{
     font-family: "bold";
-    src: url('fonte/Sitka-bold.ttc');
+    src: url('../fonte/Sitka-bold.ttc');
 }
 
 @font-face{
     font-family: "italico";
-    src: url('fonte/Sitka-italic.ttc');
+    src: url('../fonte/Sitka-italic.ttc');
 }
 
 @font-face{
     font-family: "italico-bold";
-    src: url('fonte/Sitka-italic-bold.ttc');
+    src: url('../fonte/Sitka-italic-bold.ttc');
+}
+
+:root{
+    --padrao: #353535;
+    --preto: #000000;
+    --branco: #ffffff;
+    --roxo: #662D91;
+    --lilas: #D700FF;
+    --regular: "regular";
+    --bold: "bold";
+    --italico: "italico";
+    --italcoBold: "italico-bold";
 }
 
 *{
     margin: 0;
     padding: 0;
-    font-family: "regular"; 
+    font-family: var(--regular); 
+    color: var(--preto);
 }
 
-span{
-    font-family: "Sitka";
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url("../imagens/pattern-site.png");
+    background-color: #eeeeee;
+}
+
+header{
+    display: block;
+    position: fixed;
+    top: 3%;
+    left: 5%;
+    z-index: 999;
+}
+
+.container{
+    max-width: 89.6vw;
+    margin: auto;
+}
+
+.container-content{
+    max-width: 73.7vw;
+}
+
+#aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 8vw;
+    height: 100vh;
+    right: 6vw;
+    border-left: 1px solid #B4B4B4;
+    padding-left: 50px;
+    z-index: 10;
+}
+
+#aside #menu-lateral{
+    display: flex;
+    flex-direction: column;
+}
+
+#aside #menu-lateral a{
+    text-decoration: none;
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+#aside #menu-lateral a:link{
+    transition: all 1s ease-in-out;
+}
+
+
+#redes{
+    position: relative;
+    margin-top: 35px;
+    z-index: 1111;
+}
+
+#celo-logo{
+    position: relative;
+    bottom: -26vh;
+}
+
+#celo-logo p, #redes p{ 
+    padding-bottom: 5px;
+}
+
+/* home */
+
+#banner-hero{
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#banner-hero img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+}
+
+#banner-hero div{
+    position: relative;
+    top: 25vh;
+    z-index: 5;
+}
+
+#banner-hero div h1{
+    font-size: 5.2em;
+    font-family: var(--bold);
+    line-height: 1.1;
+    width: 30%;
+    color: var(--branco);
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 1.0);
+}
+
+#banner-hero div p{
+    font-size: 1.5em;
+    width: 20%;
+    color: var(--padrao);
+}
+
+
+
+/* Sobre Nós */
+
+#sobre{
+    padding: 210px 0;
+}
+
+.top-internal{
+    padding-bottom: 50px;
+}
+
+.top-internal h1{
+    font-size: 5.7em;
+    font-family: var(--bold);
+    line-height: 1;
+}
+
+.top-internal h2{
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+#content-sobre{
+    display: flex;
+}
+
+#content-sobre p{
+    padding-right: 40px;
+    text-align: justify;
+    font-size: 0.9em;
+}
+
+#content-sobre img{
+    height: fit-content;
+}
+
+
+/* Integrantes */
+
+#integrantes{
+    padding-top: 180px;
+    padding-bottom: 190px;
+    
+}
+
+.owl-prev, .owl-next{
+    border: none;
+    background-color: transparent;
+}
+
+.btns-carousel{
+    position: absolute;
+    width: 100%;
+    top: 45%;
+}
+
+.owl-next{
+    position: absolute;
+    right: 0;
+}
+
+#integrantes .owl-item img:first-child{
+    position: absolute;
+    top: 0;
+    height: 82.8%;
+    max-width: max-content;
+    left: 10%;
+}
+
+#integrantes .content-integrante{
+    position: absolute;
+    bottom: 3.5%;
+    text-align: center;
+    left: 30%;
+}
+
+.content-integrante h1{
+    font-family: var(--bold);
+    font-size: 1.4em;
+}
+
+.content-integrante h1, .content-integrante p{
+    color: var(--branco);
+}
+
+
+/* Eventos */
+
+#eventos{
+    padding-top: 190px;
+    padding-bottom: 105px;
+}
+
+#eventos .owl-item img{
+    width: 349px;
+    height: 455px;
+}
+
+#eventos .content-evento{
+    position: absolute;
+    text-align: center;
+    width: 81%;
+    left: 11%;
+    bottom: 9%;
+    z-index: 1111;
+}
+
+#eventos .content-evento h1{
+    text-align: left;
+    font-size: 1.2em;
+    font-family: var(--regular);
+    font-weight: 400;
+}
+
+#eventos .content-evento p{
+    width: 50%;
+    padding: 10px 0;
+    background-color: var(--roxo);
+    margin-top: 10px;
+    position: relative;
+    left: 0%;
+}
+
+#eventos .content-evento h1, #eventos .content-evento p{
+    color: var(--branco);
+}
+
+
+/* Página integrante */
+
+#pagina-integrante{
+    padding-top: 210px;
+    padding-bottom: 50px;
+}
+
+#content-integrante{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-left{
+    width: 63%;
+}
+
+#header-integrante{
+    display: flex;
+    justify-content: space-between;
+}
+
+#header-integrante h1{
+    font-family: var(--bold);
+}
+
+.img-integrante-interna{
+    width: 396px;
+    height: auto;
+    display: block;
+    position: relative;
+}
+
+.img-integrante-interna img{
+    position: absolute;
+    max-width: max-content;
+    height: 497px;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.bg-img-integrante{
+    width: 100%;
+    height: 429px;
+    background-color: var(--lilas);
+}
+
+.apresentacao{
+    margin-top: 30px;
+}
+
+.menu-integrante{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--roxo);
+}
+
+.menu-integrante a{
+    text-decoration: none;
+    padding-right: 20px;
+    color: var(--branco);
+    font-size: 0.9em;
+}
+
+.menu-integrante a:first-child{
+    padding-left: 20px;
+}
+
+.ocultar-content{
+    display: none;
+}
+
+
+
+
+/* Footer */
+
+footer{
+    position: fixed;
+    left: 5.2%;
+    bottom: 3%;
 }
