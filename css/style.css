@@ -626,7 +626,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 375px){
     .main-menu{
         right: 320%;
         top: 6.5%;
@@ -646,9 +646,6 @@ footer{
         width: 75% !important;
     }
 
-    body{
-        background-color: red;
-    }
 }
 
 @media screen and (max-width: 325px){
@@ -657,8 +654,13 @@ footer{
         top: 9%;
     }
 
+}
+
+
+@media screen and (max-width: 490px){
     body{
         background-color: red;
     }
+
 }
 
