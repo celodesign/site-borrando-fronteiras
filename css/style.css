@@ -628,7 +628,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 412px){
+@media screen and (max-width: 420px){ /* display galaxy note 10 413px */
     .main-menu{
         right: 320%;
         top: 6.5%;
@@ -646,10 +646,6 @@ footer{
 
     .main-menu-open{
         width: 75% !important;
-    }
-
-    body{
-        background-color: blue;
     }
 
 }
