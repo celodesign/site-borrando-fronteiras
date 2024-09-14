@@ -228,11 +228,11 @@
   $(".act-start").click(function(){
     if(!$(this).hasClass("act")){
         $("#aside").removeClass("main-menu-open");
-        $(this).addClass("active");
+        $(this).removerClass("active");
         $(".main-menu").css("right", "165%")  
     }else{
         $("#aside").addClass("main-menu-open");
-        $(this).removeClass("active");
+        $(this).addClass("active");
         $(".main-menu").css("right", "71%")
     }
   });
