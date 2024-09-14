@@ -648,6 +648,32 @@ footer{
         width: 75% !important;
     }
 
+    #banner-hero div h1{
+        font-size: 3em;
+    }
+
+    /* sobre */
+
+    #content-sobre{
+        flex-direction: column;
+    }
+
+    .top-internal h1{
+        font-size: 3em;
+    }
+
+    .top-internal h2{
+        font-size: 1.2em;
+    }
+
+    /* footer */
+
+    footer p{
+        font-size: 0.8em;
+        width: 80vw;
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 325px){
