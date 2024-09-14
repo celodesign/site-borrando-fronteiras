@@ -25,10 +25,10 @@
         <div id="aside">
             <a href="#" class="menu animation main-menu"><span></span></a>
             <nav id="menu-lateral">
-                <a href="#">Home</a>
-                <a href="#sobre">Sobre Nós</a>
-                <a href="#integrantes">Integrantes</a>
-                <a href="#eventos">Eventos</a>
+                <a class="act-start" href="#">Home</a>
+                <a class="act-start" href="#sobre">Sobre Nós</a>
+                <a class="act-start" href="#integrantes">Integrantes</a>
+                <a class="act-start" href="#eventos">Eventos</a>
             </nav>
 
             
@@ -225,15 +225,11 @@
 
 <script>
     $(document).ready(function(){
-  $(".main-menu").click(function(){
-    if(!$(this).hasClass("active")){
-      $("#aside").addClass("main-menu-open");
-      $(this).addClass("active");
-      $(".main-menu").css("right", "71%")  
+  $(".act-start").click(function(){
+    if(!$(this).hasClass("act")){
+      
     }else{
-      $("#aside").removeClass("main-menu-open");
-      $(this).removeClass("active");
-      $(".main-menu").css("right", "175%")
+      
     }
   });
   
