@@ -645,6 +645,10 @@ footer{
     .main-menu-open{
         width: 75% !important;
     }
+
+    body{
+        background-color: red;
+    }
 }
 
 @media screen and (max-width: 325px){
