@@ -670,7 +670,7 @@ footer{
     }
 
     #sobre{
-        padding: 180px 0;
+        padding: 140px 0;
     }
 
     #content-sobre{
@@ -678,15 +678,15 @@ footer{
     }
 
     .top-internal{
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
 
     .top-internal h1{
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     .top-internal h2{
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     #content-sobre p{
@@ -724,6 +724,12 @@ footer{
     .bg-item{
         width: 326px !important;
         height: 474px !important;
+    }
+
+    /* eventos */
+
+    #eventos{
+        padding-top: 150px;
     }
 
 
