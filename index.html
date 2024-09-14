@@ -227,9 +227,9 @@
     $(document).ready(function(){
   $(".act-start").click(function(){
     if(!$(this).hasClass("act")){
-      
+        $("#aside").removeClass("main-menu-open");
     }else{
-      
+        $("#aside").addClass("main-menu-open");
     }
   });
   
