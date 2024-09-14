@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-
+    
 
 </head>
 <body>
@@ -23,7 +21,7 @@
     <main class="container">
         
         <div id="aside">
-            <a href="#" class="menu animation main-menu"><span></span></a>
+            <a href="#btn" class="menu animation main-menu act"><span></span></a>
             <nav id="menu-lateral">
                 <a class="act-start" href="#banner-hero">Home</a>
                 <a class="act-start" href="#sobre">Sobre Nós</a>
@@ -205,6 +203,8 @@
     </footer>
 </body>
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 
 <script>
     $(document).ready(function(){
@@ -226,13 +226,14 @@
 <script>
     $(document).ready(function(){
   $(".act-start").click(function(){
-    if(!$(this).hasClass("act")){
-        $("#aside").removeClass("main-menu-open");
-        $(this).removeClass("active");
-        $(".main-menu").css("right", "165%")  
+    if(!$(".main-menu").hasClass("act")){
+        $("#aside").addClass("main-menu-open");
+        $(".main-menu").addClass("active");
+        $(".main-menu").css("right", "71%")  
     }else{
-        $(this).removeClass("active");
-        $(".main-menu").css("right", "71%")
+        $("#aside").removeClass("main-menu-open");
+        $(".main-menu").removeClass("active");
+        $(".main-menu").css("right", "165%")
     }
   });
   

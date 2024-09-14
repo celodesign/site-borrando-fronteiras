@@ -204,6 +204,7 @@ header img{
     padding-right: 40px;
     text-align: justify;
     font-size: 0.9em;
+    overflow-y: auto;
 }
 
 #content-sobre img{
@@ -652,10 +653,32 @@ footer{
         font-size: 3em;
     }
 
+    /* Banner Hero */
+
+    #banner-hero div h1{
+        font-size: 3.3em;
+    }
+
+    #banner-hero div p{
+        width: 85%;
+    }
+
     /* sobre */
 
+    .container-content{
+        max-width: 90vw;
+    }
+
+    #sobre{
+        padding: 180px 0;
+    }
+
     #content-sobre{
-        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    .top-internal{
+        padding-bottom: 30px;
     }
 
     .top-internal h1{
@@ -663,14 +686,30 @@ footer{
     }
 
     .top-internal h2{
-        font-size: 1.2em;
+        font-size: 1em;
+    }
+
+    #content-sobre p{
+        width: 90vw;
+        height: 15vh;
+        padding-right: 0;
+    }
+
+    #content-sobre img{
+        width: 90vw;
+        padding-bottom: 20px;
     }
 
     /* footer */
 
+    footer{
+        bottom: 2%;
+        left: 15%;
+    }
+
     footer p{
         font-size: 0.8em;
-        width: 80vw;
+        width: 69vw;
         text-align: center;
     }
 
