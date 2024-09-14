@@ -720,7 +720,7 @@ footer{
     }
 
     .owl-item:first-child{
-        margin-right: 25px;
+        margin-right: 10px;
         /* margin-left: 10.5px; */
         /* left: 0% !important; */
     }
