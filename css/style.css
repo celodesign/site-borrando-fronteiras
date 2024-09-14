@@ -628,7 +628,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 558px){
+@media screen and (max-width: 530px){
     .main-menu{
         right: 320%;
         top: 6.5%;
