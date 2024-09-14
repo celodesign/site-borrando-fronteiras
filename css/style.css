@@ -630,12 +630,12 @@ footer{
 
 @media screen and (max-width: 420px){ /* display galaxy note 10 413px */
     .main-menu{
-        right: 320%;
+        right: 306%;
         top: 6.5%;
     }
 
     header img{
-        width: 160px;
+        width: 200px;
     }
 
     #aside{
