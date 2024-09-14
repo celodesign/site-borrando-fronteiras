@@ -55,6 +55,12 @@ header{
     z-index: 999;
 }
 
+header img{
+    position: relative;
+    width: 255px;
+    z-index: 2;
+}
+
 .container{
     max-width: 89.6vw;
     margin: auto;
@@ -622,8 +628,22 @@ footer{
 
 @media screen and (max-width: 375px){
     .main-menu{
-        right: 270%;
+        right: 306%;
         top: 6.5%;
+    }
+
+    header img{
+        width: 190px;
+    }
+
+    #aside{
+        right: -19cap;
+        transition: right .6s ease;
+        z-index: 11111;
+    }
+
+    .main-menu-open{
+        width: 75% !important;
     }
 }
 
