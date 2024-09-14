@@ -426,6 +426,10 @@ footer{
     bottom: 3%;
 }
 
+#footer-responsivo{
+    display: none;
+}
+
 /**/
 
 /* btn */
@@ -655,6 +659,10 @@ footer{
 
     /* Banner Hero */
 
+    #banner-hero div{
+        top: 55vw;
+    }
+
     #banner-hero div h1{
         font-size: 3.3em;
     }
@@ -691,7 +699,7 @@ footer{
 
     #content-sobre p{
         width: 90vw;
-        height: 15vh;
+        height: 23vh;
         padding-right: 0;
     }
 
@@ -738,12 +746,27 @@ footer{
     footer{
         bottom: 2%;
         left: 15%;
+        display: none;
     }
 
     footer p{
         font-size: 0.8em;
         width: 69vw;
         text-align: center;
+    }
+
+    #celo-logo{
+        bottom: -12vh;
+    }
+
+    #footer-responsivo{
+        display: block;
+        position: relative;
+        bottom: -15vh;
+    }
+
+    #footer-responsivo p{
+        font-size: 0.8em;
     }
 
 }
