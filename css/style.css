@@ -537,6 +537,10 @@ footer{
         left: 40%;
         height: 80%;
     }
+
+    body{
+        background-color: red;
+    }
 }
 
 @media screen and (max-width: 1040px) {
