@@ -69,9 +69,9 @@ header{
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    width: 8vw;
+    width: 8%;
     height: 100vh;
-    right: 6vw;
+    right: 3%;
     border-left: 1px solid #B4B4B4;
     padding-left: 50px;
     z-index: 10;
@@ -83,13 +83,29 @@ header{
 }
 
 #aside #menu-lateral a{
+    display: flex;
     text-decoration: none;
     font-size: 1.4em;
     margin-bottom: 30px;
+    transition: color .6s ease;
+}
+
+#aside #menu-lateral a svg{
+    padding-left: 10px;
+    transition: fill 0.6s ease;
+    display: none;
+}
+
+#aside #menu-lateral a svg:hover path{
+    fill: var(--lilas);
+}
+
+#aside #menu-lateral a:hover{
+    color: var(--lilas);
 }
 
 #aside #menu-lateral a:link{
-    transition: all 1s ease-in-out;
+    transition: all .6s ease-in-out;
 }
 
 
@@ -97,6 +113,11 @@ header{
     position: relative;
     margin-top: 35px;
     z-index: 1111;
+}
+
+#redes svg:hover path{
+    fill: var(--lilas);
+    transition: fill .5s ease;
 }
 
 #celo-logo{
@@ -122,7 +143,7 @@ header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 100%;
+    height: 100vh;
 }
 
 #banner-hero div{
@@ -359,6 +380,21 @@ header{
     height: 349px;
 }
 
+.content p::-webkit-scrollbar{
+    width: 10px;
+    
+}
+
+.content p::-webkit-scrollbar-thumb{
+    background: var(--roxo);
+    border-radius: 10px;
+}
+
+.content p::-webkit-scrollbar-track{
+    background: var(--branco);
+    border-radius: 10px;
+}
+
 .show{
     display: block;
 }
@@ -382,3 +418,212 @@ footer{
     left: 5.2%;
     bottom: 3%;
 }
+
+/**/
+
+/* btn */
+.menu {
+	position: absolute;
+	display:  inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 25px;
+    z-index: 9999;
+    right: 6vw;
+}
+.menu span {
+	margin: 0 auto;
+	position: relative;
+	top: 12px;
+}
+.menu span:before, .menu span:after {
+	position: absolute;
+	content: '';
+}
+.menu span, .menu span:before, .menu span:after {
+	width: 30px;
+	height: 6px;
+	background-color: #000;
+	display: block;
+}
+.menu span:before {
+	margin-top: -12px;
+}
+.menu span:after {
+	margin-top: 12px;
+}
+
+.main-menu{
+    display: none;
+}
+/* --- btn --- */
+
+
+
+/* animation */
+
+.animation span {
+	-webkit-transition-duration: 0s; transition-duration: 0s;
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.active span { /* hover */
+	background-color: rgba(0,0,0,0.0);
+	-webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+}
+.animation span:before {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.active span:before { /* hover */
+	margin-top: 0;
+	-webkit-transform: rotate(45deg); transform: rotate(45deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+.animation span:after {
+	-webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+	-webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;
+}
+.active span:after { /* hover */
+	margin-top: 0;
+	-webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+	-webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+}
+
+/* -- animation -- */
+
+
+/* Responsivo */
+
+@media screen and (max-width: 1560px){
+    #aside{
+        width: 9.5%;
+    }
+}
+
+@media screen and (max-width: 1340px){
+    #aside{
+        width: 10.7%;
+    }
+
+    #banner-hero img{
+        opacity: .3;
+    }
+}
+
+@media screen and (max-width: 1320px){
+    #banner-hero img{
+        left: 40%;
+        height: 95%;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    #aside{
+        width: 12.7%;
+    }
+}
+
+@media screen and (max-width: 1080px){
+
+    #banner-hero img{
+        left: 40%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    #aside{
+        width: 14.7%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #banner-hero img{
+        left: 40%;
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #aside{
+        width: 16.7%;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    #aside{
+        width: 18.7%;
+    }
+
+    #banner-hero img{
+        left: 35%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .main-menu-open{
+        width: 28% !important;
+        right: 0% !important;
+        transition: right .6s ease;
+        background-color: #eeeeee;
+        z-index: 11111;
+    }
+
+    .main-menu{
+        display: block;
+        right: 117%;
+        top: 5%;
+        z-index: 9999;
+        position: absolute;
+    }
+
+    #aside{
+        right: -18.3cap;
+        transition: right .6s ease;
+    }
+
+    #banner-hero img{
+        left: 50%;
+        width: 100vw;
+        height: auto;
+    }
+    
+    #banner-hero div h1{
+        font-size: 4.6em;
+    }
+
+    #banner-hero div p{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 630px){
+    .main-menu{
+        right: 125%;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .main-menu{
+        right: 135%;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .main-menu{
+        right: 240%;
+        top: 6.5%;
+    }
+}
+
+@media screen and (max-width: 325px){
+    .main-menu{
+        right: 245%;
+        top: 9%;
+    }
+}
+
