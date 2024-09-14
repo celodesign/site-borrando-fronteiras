@@ -656,5 +656,9 @@ footer{
         right: 245%;
         top: 9%;
     }
+
+    body{
+        background-color: red;
+    }
 }
 
