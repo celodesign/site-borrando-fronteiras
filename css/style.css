@@ -628,7 +628,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 410px){
+@media screen and (max-width: 412px){
     .main-menu{
         right: 320%;
         top: 6.5%;
@@ -649,7 +649,7 @@ footer{
     }
 
     body{
-        background-color: purple;
+        background-color: brown;
     }
 
 }
