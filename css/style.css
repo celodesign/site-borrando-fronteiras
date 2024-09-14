@@ -660,7 +660,7 @@ footer{
     /* Banner Hero */
 
     #banner-hero div{
-        top: 55vw;
+        top: 50vw;
     }
 
     #banner-hero div h1{
@@ -721,8 +721,8 @@ footer{
 
     .owl-item:first-child{
         margin-right: 25px;
-        margin-left: 10.5px;
-        left: 0% !important;
+        /* margin-left: 10.5px; */
+        /* left: 0% !important; */
     }
 
     .height-item{
