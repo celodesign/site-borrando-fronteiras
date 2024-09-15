@@ -763,12 +763,13 @@ footer{
 
     #banner-hero div h1{
         font-size: 3em;
+        width: 95%;
     }
 
     /* Banner Hero */
 
     #banner-hero div{
-        top: 42vw;
+        top: 62vw;
     }
 
     #banner-hero div h1{
