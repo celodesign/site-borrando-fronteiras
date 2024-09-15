@@ -10,8 +10,8 @@
 
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
     
+    <link rel="stylesheet" href="css/modal.css">
 
 </head>
 <body>
@@ -28,8 +28,6 @@
                 <a class="act-start" href="#integrantes">Integrantes</a>
                 <a class="act-start" href="#eventos">Eventos</a>
             </nav>
-
-            
 
             <div id="redes">
                 <p>Siga nos</p>
@@ -73,6 +71,21 @@
                 
             Pellentesque eget nunc eleifend, egestas urna vehicula, consectetur ex. Morbi posuere dui dui, id placerat lectus euismod vel. Nullam hendrerit imperdiet lacus, sit amet fermentum nulla dictum nec. Nam efficitur dapibus magna, id mollis elit consequat eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sem justo, mollis et libero non, rhoncus faucibus ipsum. In tempor elementum nisi non dictum. Aliquam pharetra molestie velit at venenatis. Nullam aliquet, nisi eget consectetur ullamcorper, urna eros vehicula nunc, at placerat metus sem nec sapien.
             </p>
+            <div id="open-modal" class="modal-window">
+                <div>
+                    <a href="#fechar" title="Close" class="modal-close">Fechar  </a>
+                    <p>
+                        Sed odio tortor, volutpat in metus et, vulputate efficitur diam. Pellentesque euismod ornare feugiat. Nullam ut diam quis lacus condimentum egestas. Aliquam mattis pulvinar placerat. Sed interdum, neque in interdum pellentesque, odio eros dapibus lorem, in sollicitudin dolor est vel risus. Integer a commodo dolor, vitae tempor risus. Duis interdum enim leo, at pharetra velit tincidunt a. Cras eu fringilla ligula.<br><br> 
+
+                        Quisque fermentum massa in dolor pretium vulputate. Vivamus molestie ex id lorem semper, interdum laoreet metus vestibulum. Vestibulum commodo, arcu sed porta luctus, tellus arcu pellentesque orci, sed condimentum odio ipsum vel dui. Cras sollicitudin elit ut porttitor accumsan.<br><br>
+                                
+                        Sed bibendum, risus quis bibendum tempus, sapien urna interdum augue, tempus cursus nisi augue vel elit. Sed tempus nibh ut nunc rhoncus, ac placerat metus tincidunt. Aenean lacus libero, laoreet nec malesuada sit amet, consequat et sapien. Integer laoreet sapien diam, vitae elementum metus condimentum eget.<br><br>
+                            
+                        Pellentesque eget nunc eleifend, egestas urna vehicula, consectetur ex. Morbi posuere dui dui, id placerat lectus euismod vel. Nullam hendrerit imperdiet lacus, sit amet fermentum nulla dictum nec. Nam efficitur dapibus magna, id mollis elit consequat eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sem justo, mollis et libero non, rhoncus faucibus ipsum. In tempor elementum nisi non dictum. Aliquam pharetra molestie velit at venenatis. Nullam aliquet, nisi eget consectetur ullamcorper, urna eros vehicula nunc, at placerat metus sem nec sapien.
+                    </p>
+                </div>
+            </div>
+            <a class="btn" href="#open-modal">Ler Bio</a>
             <img src="imagens/img-quem-somos.jpg" alt="">
            </div>
         </section>
@@ -221,15 +234,24 @@
 <script>
     $(document).ready(function(){
   $(".main-menu").click(function(){
+    const larguraTela = screen.width;
     if(!$(this).hasClass("actives")){
       $("#aside").addClass("main-menu-open");
       $(this).addClass("actives");
       $(".main-menu").css("right", "71%")  
+      if(larguraTela == 320){
+        $(".main-menu").css("right", "67%");
+      }
     }else{
       $("#aside").removeClass("main-menu-open");
-      $(this).removeClass("actives");
-      $(".main-menu").css("right", "165%")
+      $(this).removeClass("actives");   
+      if(larguraTela == 320){
+        $(".main-menu").css("right", "190%");
+      }else{
+        $(".main-menu").css("right", "165%");
+      }
     }
+
   });
   
 });
@@ -238,14 +260,23 @@
 <script>
     $(document).ready(function(){
   $(".act-start").click(function(){
+    const larguraTela = screen.width;
     if(!$(".main-menu").hasClass("act")){
         $("#aside").addClass("main-menu-open");
         $(".main-menu").addClass("actives");
-        $(".main-menu").css("right", "71%")  
+        $(".main-menu").css("right", "71%");
+        if(larguraTela == 320){
+        $(".main-menu").css("right", "67%");
+      }  
     }else{
         $("#aside").removeClass("main-menu-open");
         $(".main-menu").removeClass("actives");
         $(".main-menu").css("right", "165%")
+        if(larguraTela == 320){
+        $(".main-menu").css("right", "190%");
+      }else{
+        $(".main-menu").css("right", "165%");
+      }
     }
   });
   

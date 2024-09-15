@@ -211,6 +211,19 @@ header img{
     height: fit-content;
 }
 
+.btn{
+    display: none;
+    background-color: white;
+    padding: 1em 1em;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    position: relative;
+    top: -89px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
 
 /* Integrantes */
 
@@ -516,7 +529,7 @@ footer{
 
 }
 
-@media screen and (max-width: 1340px){
+@media screen and (max-width: 1360px){
     #aside{
         width: 10.7%;
     }
@@ -524,6 +537,23 @@ footer{
     #banner-hero img{
         opacity: .2;
     }
+
+    /* sobre */
+
+    #content-sobre{
+        gap: 30px;
+    }
+
+    #content-sobre img{
+        width: 40%;
+    }
+
+    #content-sobre p{
+        height: 40vh;
+        padding-right: 0;
+    }
+
+    
 }
 
 @media screen and (max-width: 1320px){
@@ -533,13 +563,19 @@ footer{
     }
 }
 
-@media screen and (max-width: 1150px){
-    #aside{
-        width: 12.7%;
+@media screen and (max-width: 1280px){
+    #banner-hero img{
+        left: 40%;
+        height: 95%;
     }
 }
 
+
 @media screen and (max-width: 1080px){
+
+    .container-content{
+        max-width: 71.8vw;
+    }
 
     #banner-hero img{
         left: 40%;
@@ -551,6 +587,12 @@ footer{
 @media screen and (max-width: 1040px) {
     #aside{
         width: 14.7%;
+    }
+
+    /* sobre */
+
+    #content-sobre p{
+        width: 45%;
     }
 }
 
@@ -578,7 +620,17 @@ footer{
     }
 }
 
+@media screen and (max-width: 802px) {
+    .container-content{
+        max-width: 66.7vw;
+    }
+}
+
 @media screen and (max-width: 768px) {
+
+    .container-content{
+        max-width: 90vw;
+    }
 
     .main-menu-open{
         width: 28% !important;
@@ -623,7 +675,16 @@ footer{
 
     #content-sobre{
         flex-direction: column-reverse;
-        width: 94vw;
+        width: 95vw;
+    }
+
+    #content-sobre img{
+        width: 95%;
+        margin-bottom: 30px;
+    }
+
+    #content-sobre p{
+        height: 20vh;
     }
 
     .top-internal{
@@ -636,6 +697,12 @@ footer{
 
     .top-internal h2{
         font-size: 1.2em;
+    }
+
+    /* footer */
+
+    footer{
+        display: none;
     }
 
 }
@@ -652,10 +719,25 @@ footer{
     }
 }
 
-@media screen and (max-width: 470px){
+@media screen and (max-width: 480px){
+
+    .container-content{
+        width: 90vw;
+    }
+
     .main-menu{
         right: 240%;
-        top: 6.5%;
+        top: 5%;
+    }
+
+    /* sobre */
+
+    #content-sobre img{
+        margin-bottom: 0;
+    }
+
+    #content-sobre p{
+        width: 90vw;
     }
 }
 
@@ -686,7 +768,7 @@ footer{
     /* Banner Hero */
 
     #banner-hero div{
-        top: 50vw;
+        top: 42vw;
     }
 
     #banner-hero div h1{
@@ -721,6 +803,7 @@ footer{
 
     .top-internal h2{
         font-size: 0.8em;
+        margin-top: 5px;
     }
 
     #content-sobre p{
@@ -731,13 +814,13 @@ footer{
 
     #content-sobre img{
         width: 90vw;
-        padding-bottom: 20px;
+        padding-bottom: 0;
     }
 
     /* integrantes */
 
     #integrantes{
-        padding-top: 130px;
+        padding-top: 135px;
     }
 
     .owl-item{
@@ -752,12 +835,20 @@ footer{
     }
 
     .height-item{
-        height: 390px !important;
+        height: 302px !important;
+    }
+
+    #integrantes .owl-item img:first-child{
+        left: 19%;
+    }
+
+    #integrantes .content-integrante{
+        bottom: 1.5%;
     }
 
     .bg-item{
         width: 326px !important;
-        height: 474px !important;
+        height: 365px !important;
     }
 
     /* eventos */
@@ -769,6 +860,10 @@ footer{
     .owl-stage{
         display: flex;
         justify-content: space-around;
+    }
+
+    #eventos .owl-item img{
+        height: 365px !important;
     }
 
     /* footer */
@@ -801,11 +896,128 @@ footer{
 
 }
 
-@media screen and (max-width: 325px){
-    .main-menu{
-        right: 245%;
-        top: 9%;
+@media screen and (max-width: 320px){
+
+    header img{
+        width: 185px;
+        margin-top: 20px;
     }
+
+    .main-menu{
+        right: 190%;
+        top: 6%;
+    }
+
+    .main-menu::after{
+        right: 67% !important;
+    }
+
+    #banner-hero div{
+        top: 170px;
+    }
+
+    #banner-hero div h1{
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 2.5em;
+    }
+
+    #banner-hero div p{
+        font-size: 1em;
+    }
+
+    #aside{
+        height: 100%;
+    }
+
+    #aside #menu-lateral{
+        margin-top: 60px;
+        margin-bottom: 0;
+    }
+
+    #aside #menu-lateral a{
+        font-size: 1.2em;
+        line-height: 0.6;
+    }
+
+    #redes{
+        margin-top: 0;
+    }
+    
+    #celo-logo{
+        bottom: -4vh;
+    }
+
+    #footer-responsivo{
+        bottom: -6vh;
+        width: 80%;
+    }
+
+    /* sobre */
+
+    .btn{
+        display: block;
+    }
+
+    #open-modal div p{
+        width: 100%;
+        height: 70vh;
+    }
+
+    /* integrantes */
+
+    .bg-item{
+        width: 280px !important;
+        height: 238px !important;
+    }
+
+    .height-item{
+        height: 197px !important;
+    }
+
+    #integrantes .owl-item img:first-child{
+        left: 27%;
+    }
+
+    .content-integrante h1{
+        font-size: 1em;
+        padding-right: 10px;
+    }
+
+    .content-integrante p{
+        font-size: 0.9em;
+    }
+
+    #integrantes .content-integrante{
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        left: 27%;
+    }
+
+
+    /* eventos */
+
+    #eventos .owl-item img{
+        height: 230px !important;
+    }
+
+    #eventos .content-evento h1{
+        width: 75%;
+        position: relative;
+        left: 18%;
+        font-size: 1em;
+    }
+
+    #eventos .content-evento p{
+        left: 18%;
+        font-size: 0.8em;
+    }
+
+    #eventos .content-evento{
+        bottom: 22%;
+    }
+    
 
 }
 
