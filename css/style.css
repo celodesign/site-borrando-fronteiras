@@ -787,7 +787,8 @@ footer{
     }
 
     #sobre{
-        padding: 147px 0;
+        padding-top: 147px;
+        padding-bottom: 130px;
     }
 
     #content-sobre{
