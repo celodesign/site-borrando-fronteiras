@@ -716,7 +716,7 @@ footer{
 
     .owl-item{
         position: relative;
-        left: 3.1% !important;
+        /* left: 3.1% !important; */
     }
 
     .owl-item:first-child{
@@ -740,6 +740,13 @@ footer{
         padding-top: 130px;
     }
 
+    .space-evento{
+        margin-right: 20px !important;
+    }
+
+    .owl-stage{
+        left: 5%;
+    }
 
     /* footer */
 
