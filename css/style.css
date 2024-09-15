@@ -371,6 +371,8 @@ header img{
 
 .active, .menu-integrante a:hover{
     opacity: 1 !important;
+    display: flex;
+    justify-content: center;
 }
 
 .menu-integrante a:first-child{
@@ -720,7 +722,7 @@ footer{
     }
 
     .owl-item:first-child{
-        margin-right: 10px;
+        /* margin-right: 10px; */
         /* margin-left: 10.5px; */
         /* left: 0% !important; */
     }
@@ -740,12 +742,9 @@ footer{
         padding-top: 130px;
     }
 
-    .space-evento{
-        margin-right: 15px !important;
-    }
-
     .owl-stage{
-        left: 5%;
+        display: flex;
+        justify-content: space-around;
     }
 
     /* footer */
