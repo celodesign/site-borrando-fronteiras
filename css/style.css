@@ -876,7 +876,7 @@ footer{
     }
 
     .menu-integrante-responsivo .sub-menu{
-        display: flex;
+        display: flex !important;
         position: absolute;
         flex-direction: column;
         gap: 20px;
@@ -904,7 +904,7 @@ footer{
     }
 
     .open{
-        display: flex !important;
+        display: none !important;
         bottom: 60px !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -1032,6 +1032,12 @@ footer{
     .bg-item{
         width: 326px !important;
         height: 365px !important;
+    }
+
+    /* página integrante */
+
+    #pagina-integrante{
+        padding-top: 170px;
     }
 
     /* eventos */
