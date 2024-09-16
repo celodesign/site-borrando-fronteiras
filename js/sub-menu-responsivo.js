@@ -9,5 +9,5 @@ function menuShow(){
         document.querySelector('.sub-menu').classList.remove('open-second');
         document.querySelector('.icon').src = 'imagens/icon-sub-menu-fechar.svg';
     }
-    console.log(subMenu);
+   
 }
