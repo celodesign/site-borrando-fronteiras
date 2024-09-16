@@ -19,7 +19,7 @@ $(document).ready(function(){
         $(".main-menu").css("right", "165%");
       }
     }
-    console.log(larguraTela)
+    
   });
   
 });
