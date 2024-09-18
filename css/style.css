@@ -658,6 +658,7 @@ footer{
     }
 
     #banner-hero img{
+        top: 58%;
         left: 50%;
         width: 100vw;
         height: auto;
@@ -800,7 +801,7 @@ footer{
     /* página integrante */
 
     .content p, .conteudo-evento p{
-        height: 150px;
+        height: 190px;
     }
 
     .img-integrante-interna{
@@ -858,8 +859,8 @@ footer{
         text-align: center;
         align-items: center;
         z-index: 1111;
-        right: 12vw;
-        bottom: 250px;
+        right: 17vw;
+        bottom: 40vh;
         -webkit-transition: .3s ease;
     }
 
@@ -889,7 +890,8 @@ footer{
         z-index: -1;
         max-width: 40%;
         height: 100%;
-        background-color: var(--branco);
+        background-color: var(--roxo);
+        color: var(--branco);
         align-items: center;
         justify-content: center;
         display: flex;
@@ -986,6 +988,7 @@ footer{
     }
 
     #content-sobre p{
+        display: none;
         width: 90vw;
         height: 23vh;
         padding-right: 0;
@@ -1051,6 +1054,10 @@ footer{
         height: 365px !important;
     }
 
+    .img-integrante-interna img{
+        left: 35%;
+    }
+
     /* footer */
 
     footer{
@@ -1083,6 +1090,11 @@ footer{
 
 @media screen and (max-width: 320px){
 
+    header{
+        top: 2%;
+        left: 9%;
+    }
+
     header img{
         width: 185px;
         margin-top: 20px;
@@ -1090,7 +1102,7 @@ footer{
 
     .main-menu{
         right: 190%;
-        top: 6%;
+        top: 4%;
     }
 
     .main-menu::after{
@@ -1151,6 +1163,10 @@ footer{
 
     /* integrantes */
 
+    #integrantes{
+        padding-top: 130px;
+    }
+
     .bg-item{
         width: 280px !important;
         height: 238px !important;
@@ -1180,16 +1196,16 @@ footer{
         left: 27%;
     }
 
-    .img-integrante-interna{
-        display: none;
-    }
-
     .content p{
         font-size: 0.9em;
     }
 
 
     /* eventos */
+
+    #eventos{
+        padding-top: 130px;
+    }
 
     #eventos .owl-item img{
         height: 230px !important;
@@ -1214,14 +1230,14 @@ footer{
     /* página integrante */
 
     #pagina-integrante{
-        padding-top: 160px;
+        padding-top: 140px;
     }
 
     .menu-integrante-responsivo{
         width: 35px;
         height: 35px;
-        right: 5vw;
-        bottom: 25px;
+        right: 10vw;
+        bottom: 11vh;
     }
 
     .menu-integrante-responsivo .sub-menu a{
@@ -1240,7 +1256,18 @@ footer{
     #header-integrante div{
         padding-bottom: 0;
     }
+
+    .img-integrante-interna{
+        display: none;
+    }
+
+    .img-integrante-interna img{
+        left: 50%;
+    }
     
+    #content-integrante .content p{
+        height: 165px;
+    }
 
 }
 
