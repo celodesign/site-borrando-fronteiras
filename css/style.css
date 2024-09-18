@@ -837,10 +837,6 @@ footer{
         top: 35vh;
     }
 
-    .owl-carousel .owl-item img{
-        width: 91% !important;
-    }
-
     #integrantes .owl-item img:first-child{
         height: 62.5%;
     }
