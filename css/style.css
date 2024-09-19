@@ -24,6 +24,7 @@
     --branco: #ffffff;
     --roxo: #662D91;
     --lilas: #D700FF;
+    --bege: #e9e9e9;
     --regular: "regular";
     --bold: "bold";
     --italico: "italico";
@@ -520,9 +521,17 @@ footer{
 /* -- animation -- */
 
 
-.menu-integrante-responsivo{
+.barra-responsivo{
     display: none;
+    width: 100%;
+    height: 140px;
+    background-color: var(--bege);
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
 }
+
 
 /* Responsivo */
 
@@ -632,6 +641,10 @@ footer{
 
 @media screen and (max-width: 768px) {
 
+    header{
+        top: 3.5%
+    }
+
     .container-content{
         max-width: 90vw;
     }
@@ -685,7 +698,7 @@ footer{
 
     #content-sobre img{
         width: 95%;
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
 
     #content-sobre p{
@@ -704,6 +717,24 @@ footer{
         font-size: 1.2em;
     }
 
+    #content-sobre p{
+        width: 95%;
+    }
+
+    /* eventos */
+
+    #eventos{
+        padding-top: 145px;
+        padding-bottom: 255px;
+    }
+
+    /* integrantes */
+
+    #integrantes{
+        padding-top: 275px;
+        padding-bottom: 176px;
+    }
+
     /* footer */
 
     footer{
@@ -711,6 +742,11 @@ footer{
     }
 
     /* pagina interna integrante */
+
+    #pagina-integrante{
+        padding-top: 240px;
+        padding-bottom: 30px;
+    }
 
     #content-integrante{
         display: flex;
@@ -729,6 +765,7 @@ footer{
 
     #header-integrante div{
         padding-bottom: 10px;
+        width: 77.5vw;
     }
 
     .menu-integrante{
@@ -746,6 +783,24 @@ footer{
     
     .menu-integrante a:first-child{
         padding-left: 0;
+    }
+
+    /* Página interna eventos */
+
+    .conteudo-evento{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .conteudo-evento p{
+        font-size: 1.3em;
+        overflow-y: visible;
+        height: 100%;
+    }
+
+    .barra-responsivo{
+        display: block;
+        height: 190px;
     }
 
 }
@@ -766,7 +821,7 @@ footer{
     }
 
     .content p, .conteudo-evento p{
-        width: 89.5vw;
+        width: 79.174vw;
     }
 }
 
@@ -796,7 +851,6 @@ footer{
     #content-sobre p{
         width: 90vw;
     }
-#content-integrante
 
     /* página integrante */
 
@@ -845,6 +899,37 @@ footer{
     #integrantes .content-integrante{
         bottom: 26.5%;
     }
+
+
+    /* Página interna eventos */
+
+    #header-integrante div h1{
+        font-size: 1.2em;
+    }
+
+    #header-integrante div p{
+        font-size: 0.9em;
+    }
+
+    .conteudo-evento{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .conteudo-evento img{
+        max-width: 100%;
+    }
+
+    .conteudo-evento p{
+        width: 89.174vw;
+        overflow-y: visible;
+        height: auto;
+    }
+    
+    .barra-responsivo{
+        display: block !important;
+    }
+
 
     /* -- sub menu responsivo -- */
 
@@ -923,7 +1008,7 @@ footer{
 @media screen and (max-width: 420px){ /* display galaxy note 10 413px */
     .main-menu{
         right: 165%;
-        top: 6%;
+        top: 4%;
     }
 
     header img{
@@ -1058,6 +1143,35 @@ footer{
         left: 35%;
     }
 
+    /* Página interna eventos */
+
+    #header-integrante div h1{
+        font-size: 1.2em;
+    }
+
+    #header-integrante div p{
+        font-size: 0.9em;
+    }
+
+    .conteudo-evento{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .conteudo-evento img{
+        max-width: 100%;
+    }
+
+    .conteudo-evento p{
+        width: 89.6vw;
+        overflow-y: visible;
+        height: auto;
+    }
+    
+    .barra-responsivo{
+        display: block !important;
+    }
+
     /* footer */
 
     footer{
@@ -1102,7 +1216,7 @@ footer{
 
     .main-menu{
         right: 190%;
-        top: 4%;
+        top: 6.5%;
     }
 
     .main-menu::after{
@@ -1230,7 +1344,8 @@ footer{
     /* página integrante */
 
     #pagina-integrante{
-        padding-top: 140px;
+        padding-top: 160px;
+        padding-bottom: 30px;
     }
 
     .menu-integrante-responsivo{
@@ -1267,6 +1382,34 @@ footer{
     
     #content-integrante .content p{
         height: 165px;
+    }
+
+    /* Página interna eventos */
+
+    #header-integrante div h1{
+        font-size: 1.2em;
+    }
+
+    #header-integrante div p{
+        font-size: 0.9em;
+    }
+
+    .conteudo-evento{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .conteudo-evento img{
+        max-width: 100%;
+    }
+
+    .conteudo-evento p{
+        overflow-y: visible;
+        height: auto;
+    }
+    
+    .barra-responsivo{
+        display: block !important;
     }
 
 }

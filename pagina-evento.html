@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Borrando Fronteiras</title>
 
-    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="imagen/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scroll-internas.css">
 
 </head>
 <body>
+    <div class="barra-responsivo"></div>
     <header class="container">
         <img src="imagens/logo-borrando.svg" alt="logo-borrando" width="255">
     </header>
     <main class="container">
 
         <div id="aside">
+            <a href="#btn" class="menu animation main-menu act"><span></span></a>
             <nav id="menu-lateral">
                 <a href="index.html">Home</a>
                 <a href="index.html#sobre">Sobre Nós</a>
                 <a href="index.html#integrantes">Integrantes</a>
                 <a href="index.html#eventos">Eventos</a>
-            </nav>
+            </nav>            
 
             <div id="redes">
                 <p>Siga nos</p>
@@ -83,4 +86,41 @@
 
 
 <script src="js/script-abas.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/menu-responsivo.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        responsiveClass: true,
+        navContainerClass: 'btns-carousel',
+        navText: ['<img src="imagens/icon-left.svg" style="border: none;">', '<img src="imagens/icon-right.svg" style="border: none;">'],
+        responsive: {
+          0: {
+            items: 1,
+            loop: false,
+            dots: false,
+            nav: true
+          },
+          600: {
+            items: 3,
+            nav: true,
+            dots: false,
+            margin: 10
+          },
+          1000: {
+            items: 4,
+            nav: true,
+            dots: false,
+            loop: false,
+            margin: 10
+          }
+        }
+      })
+    })
+   
+  </script>
 </html>
