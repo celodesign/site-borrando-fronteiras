@@ -671,14 +671,19 @@ footer{
     }
 
     #banner-hero img{
-        top: 58%;
+        top: 50%;
         left: 50%;
         width: 100vw;
         height: auto;
     }
+
+    #banner-hero div{
+        top: 40vh;
+    }
     
     #banner-hero div h1{
         font-size: 4.6em;
+        width: 100%;
     }
 
     #banner-hero div p{
