@@ -532,6 +532,10 @@ footer{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
 }
 
+.menu-integrante-responsivo{
+    display: none;
+}
+
 
 /* Responsivo */
 
@@ -756,6 +760,7 @@ footer{
     #content-integrante{
         display: flex;
         gap: 20px;
+        flex-direction: column-reverse;
     }
 
     .content-left{
@@ -770,11 +775,12 @@ footer{
 
     #header-integrante div{
         padding-bottom: 10px;
-        width: 77.5vw;
+        width: 95.2vw;
     }
 
     .menu-integrante{
         display: flex;
+        width: 92vw;
         flex-wrap: wrap;
         flex-direction: column;
         padding: 10px 0;
@@ -783,11 +789,31 @@ footer{
     }
 
     .content p, .conteudo-evento p{
+        width: 92vw;
         height: 300px;
+        overflow-y: visible;
     }
     
     .menu-integrante a:first-child{
         padding-left: 0;
+    }
+
+    .bg-img-integrante{
+        width: 92vw;
+        height: 63vh;
+    }
+
+    .img-integrante-interna{
+        width: 100vw;
+        z-index: -1;
+    }
+
+    #header-integrante h1{
+        font-size: 2.5em;
+    }
+    
+    #header-integrante p{
+        font-size: 1em;
     }
 
     /* Página interna eventos */
@@ -798,14 +824,15 @@ footer{
     }
 
     .conteudo-evento p{
-        font-size: 1.3em;
+        font-size: 1em;
         overflow-y: visible;
         height: 100%;
+        width: 89.8vw;
     }
 
     .barra-responsivo{
         display: block;
-        height: 190px;
+        height: 180px;
     }
 
 }
@@ -861,6 +888,10 @@ footer{
 
     /* página integrante */
 
+    #integrantes{
+        padding-top: 155px;
+    }
+
     .content p, .conteudo-evento p{
         height: 190px;
     }
@@ -907,6 +938,15 @@ footer{
         bottom: 26.5%;
     }
 
+    .content p{
+        width: 89.174vw;
+        overflow-y: visible;
+    }
+
+    .bg-img-integrante{
+        height: 100vh;
+    }
+
 
     /* Página interna eventos */
 
@@ -931,6 +971,7 @@ footer{
         width: 89.174vw;
         overflow-y: visible;
         height: auto;
+        font-size: 1em;
     }
     
     .barra-responsivo{
@@ -951,8 +992,8 @@ footer{
         text-align: center;
         align-items: center;
         z-index: 1111;
-        right: 17vw;
-        bottom: 40vh;
+        right: 9vw;
+        bottom: 6vh;
         -webkit-transition: .3s ease;
     }
 
