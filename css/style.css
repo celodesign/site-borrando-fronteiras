@@ -819,6 +819,7 @@ footer{
 
     .img-integrante-interna{
         height: 156px;
+        z-index: -1;
     }
 
     .img-integrante-interna img{
@@ -828,6 +829,7 @@ footer{
     .content p, .conteudo-evento p{
         width: 79.174vw;
     }
+    
 }
 
 @media screen and (max-width: 560px){
@@ -1078,7 +1080,7 @@ footer{
     }
 
     #content-sobre p{
-        display: none;
+        display: block;
         width: 90vw;
         height: 23vh;
         padding-right: 0;
@@ -1126,7 +1128,21 @@ footer{
     /* página integrante */
 
     #pagina-integrante{
-        padding-top: 170px;
+        padding-top: 190px;
+    }
+
+    .content p{
+        width: 89.174vw;
+        overflow-y: visible;
+    }
+
+    .menu-integrante-responsivo{
+        right: 9vw;
+        bottom: 6vh;
+    }
+
+    .menu-integrante-responsivo .sub-menu a{
+        left: 63px;
     }
 
     /* eventos */
@@ -1145,7 +1161,7 @@ footer{
     }
 
     .img-integrante-interna img{
-        left: 35%;
+        left: 50%;
     }
 
     /* Página interna eventos */
@@ -1171,10 +1187,12 @@ footer{
         width: 89.6vw;
         overflow-y: visible;
         height: auto;
+        font-size: 1em;
     }
     
     .barra-responsivo{
         display: block !important;
+        height: 150px;
     }
 
     /* footer */
@@ -1271,11 +1289,16 @@ footer{
 
     /* sobre */
 
+    #sobre{
+        padding-top: 145px;
+    }
+
     .btn{
         display: block;
     }
 
     #open-modal div p{
+        display: block !important;
         width: 100%;
         height: 70vh;
     }
@@ -1349,7 +1372,7 @@ footer{
     /* página integrante */
 
     #pagina-integrante{
-        padding-top: 160px;
+        padding-top: 170px;
         padding-bottom: 30px;
     }
 
@@ -1377,16 +1400,17 @@ footer{
         padding-bottom: 0;
     }
 
-    .img-integrante-interna{
-        display: none;
-    }
-
     .img-integrante-interna img{
         left: 50%;
     }
     
     #content-integrante .content p{
         height: 165px;
+    }
+
+    .content p{
+        width: 88.174vw;
+        overflow-y: visible;
     }
 
     /* Página interna eventos */
@@ -1411,10 +1435,12 @@ footer{
     .conteudo-evento p{
         overflow-y: visible;
         height: auto;
+        font-size: 1em;
     }
     
     .barra-responsivo{
         display: block !important;
+        height: 140px;
     }
 
 }
