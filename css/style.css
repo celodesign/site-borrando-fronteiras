@@ -570,6 +570,32 @@ footer{
         padding-right: 0;
     }
 
+    /* Página integrante */
+
+    #header-integrante{
+        flex-direction: column;
+        width: 94%;
+    }
+
+    .content{
+        width: 94%;
+    }
+
+    .top-internal{
+        padding-bottom: 30px;
+    }
+
+    .top-internal h1{
+        font-size: 3.7em;
+    }
+
+    .content p{
+        height: 140px;
+    }
+
+    .img-integrante-interna img{
+        max-width: 45%;
+    }
     
 }
 
@@ -991,7 +1017,7 @@ footer{
         background-color: var(--roxo);
         text-align: center;
         align-items: center;
-        z-index: 1111;
+        z-index: 1;
         right: 9vw;
         bottom: 6vh;
         -webkit-transition: .3s ease;
@@ -1029,7 +1055,7 @@ footer{
         justify-content: center;
         display: flex;
         position: relative;
-        left: 120px;
+        left: 70px;
         text-decoration: none;
         border-radius: 20px;
     }
