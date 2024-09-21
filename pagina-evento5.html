@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrando Fronteiras</title>
+
+    <link rel="shortcut icon" href="imagen/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scroll-internas.css">
+
+</head>
+<body>
+    <div class="barra-responsivo"></div>
+    <header class="container">
+        <a href="index.html"><img src="imagens/logo-borrando.svg" alt="logo-borrando"></a>
+    </header>
+    <main class="container">
+
+        <div id="aside">
+            <a href="#btn" class="menu animation main-menu act"><span></span></a>
+            <nav id="menu-lateral">
+                <a href="index.html">Home</a>
+                <a href="index.html#sobre">Sobre Nós</a>
+                <a href="index.html#integrantes">Integrantes</a>
+                <a href="index.html#eventos">Eventos</a>
+            </nav>            
+
+            <div id="redes">
+                <p>Siga nos</p>
+                <img src="imagens/icon-insta.svg" alt="icon-insta">
+                <img src="imagens/icon-linkedin.svg" alt="icon-face">
+            </div>
+
+            <div id="celo-logo">
+                <p>Feito por</p>
+                <img src="imagens/logo-celo-design.svg" alt="celo-logo">
+            </div>
+
+            <div id="footer-responsivo">
+                <p>Borrando Fronteiras 2024. Todos os direitos reservados</p>
+            </div>
+        </div>
+
+        <section id="pagina-integrante" class="container-content">
+            <div class="top-internal">
+                <h1>Eventos</h1>
+                <h2>Veja todos os eventos e publicações do Borrando</h2>
+            </div>
+
+           <div id="content-integrante">
+
+                <div class="container-content">
+                    <div id="header-integrante">
+                        <div>
+                            <h1>O ensino artístico que temos e o que queremos: posturas, histórias e experiências no Brasil e em Portugal</h1>
+                            <p>30/06/2021</p>
+                        </div>
+                        
+                    </div>
+                    <div id="content-sub-menu">
+                        <div class="conteudo-evento">
+                            <p>
+                                O ensino artístico que temos e o que queremos: posturas, histórias e experiências no Brasil e em Portugal<br><br>
+                                Link: <a href="https://i2ads.up.pt/publicacoes/o-ensino-artistico-que-temos-e-o-que-queremos/">https://i2ads.up.pt/publicacoes/o-ensino-artistico-que-temos-e-o-que-queremos/</a>
+                            </p>
+                            <img src="imagens/img-noticia-interna5.jpg" alt="img evento">
+                        </div>
+                    </div>
+                </div>
+           </div>
+           
+        </section>
+
+    </main>
+    <footer class="container">
+        <p>Borrando Fronteiras 2024. Todos os direitos reservados</p>
+    </footer>
+</body>
+
+
+<script src="js/script-abas.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/menu-responsivo.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        responsiveClass: true,
+        navContainerClass: 'btns-carousel',
+        navText: ['<img src="imagens/icon-left.svg" style="border: none;">', '<img src="imagens/icon-right.svg" style="border: none;">'],
+        responsive: {
+          0: {
+            items: 1,
+            loop: false,
+            dots: false,
+            nav: true
+          },
+          600: {
+            items: 3,
+            nav: true,
+            dots: false,
+            margin: 10
+          },
+          1000: {
+            items: 4,
+            nav: true,
+            dots: false,
+            loop: false,
+            margin: 10
+          }
+        }
+      })
+    })
+   
+  </script>
+</html>

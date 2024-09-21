@@ -333,6 +333,11 @@ header img{
     margin-right: 0 !important;
 }
 
+.conteudo-evento{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* Página integrante */
 
