@@ -370,38 +370,6 @@ header img{
     background-color: var(--lilas);
 }
 
-.menu-integrante{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: var(--roxo);
-}
-
-.menu-integrante a{
-    text-decoration: none;
-    padding-right: 20px;
-    color: var(--branco);
-    opacity: 0.6;
-    font-size: 0.9em;
-    transition: opacity .5s ease;
-}
-
-.active, .menu-integrante a:hover{
-    opacity: 1 !important;
-    display: flex;
-    justify-content: center;
-}
-
-.menu-integrante a:first-child{
-    padding-left: 20px;
-}
-
-.content{
-    display: none;
-    margin-top: 30px;
-}
-
 .content p, .conteudo-evento p{
     overflow-y: auto;
     height: 349px;
@@ -422,8 +390,8 @@ header img{
     border-radius: 10px;
 }
 
-.show{
-    display: block;
+#header-integrante div{
+    margin-bottom: 20px;
 }
 
 /* Página Eventos */
