@@ -7,7 +7,11 @@ $(document).ready(function(){
       $(".main-menu").css("right", "71%")  
       if(larguraTela == 320){
         $(".main-menu").css("right", "67%");
-      }
+      }else if(larguraTela == 768) {
+        $(".main-menu").css("right", "61%");
+      }else{
+        $(".main-menu").css("right", "71%");
+      }  
     }else{
       $("#aside").removeClass("main-menu-open");
       $(this).removeClass("actives");   
@@ -19,7 +23,7 @@ $(document).ready(function(){
         $(".main-menu").css("right", "165%");
       }
     }
-    
+    console.log(larguraTela);
   });
   
 });
@@ -33,19 +37,24 @@ $(document).ready(function(){
         $(".main-menu").css("right", "71%");
         if(larguraTela == 320){
         $(".main-menu").css("right", "67%");
-      }  
+        }else if(larguraTela == 768) {
+          $(".main-menu").css("right", "115%");
+        }else{
+          $(".main-menu").css("right", "71%");
+        }  
     }else{
         $("#aside").removeClass("main-menu-open");
         $(".main-menu").removeClass("actives");
         $(".main-menu").css("right", "165%")
         if(larguraTela == 320){
         $(".main-menu").css("right", "190%");
-      }else if(larguraTela == 768) {
-        $(".main-menu").css("right", "115%");
-      }else{
-        $(".main-menu").css("right", "165%");
-      }
+        }else if(larguraTela == 768) {
+          $(".main-menu").css("right", "115%");
+        }else{
+          $(".main-menu").css("right", "165%");
+        }
     }
+    console.log(larguraTela);
   });
   
 });
