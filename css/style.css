@@ -199,13 +199,25 @@ header img{
 
 #content-sobre{
     display: flex;
+    gap: 20px;
 }
 
 #content-sobre p{
-    padding-right: 40px;
+    padding-right: 20px;
     text-align: justify;
     font-size: 0.9em;
     overflow-y: auto;
+    height: 412px;
+}
+
+#content-sobre p::-webkit-scrollbar{
+    width: 10px;
+    
+}
+
+#content-sobre p::-webkit-scrollbar-thumb{
+    background: var(--roxo);
+    border-radius: 10px;
 }
 
 #content-sobre img{
