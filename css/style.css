@@ -134,6 +134,7 @@ header img{
 
 #celo-logo p, #redes p{ 
     padding-bottom: 5px;
+    font-size: 0.8em;
 }
 
 /* home */
@@ -187,7 +188,7 @@ header img{
 }
 
 .top-internal h1{
-    font-size: 5.7em;
+    font-size: 4.5em;
     font-family: var(--bold);
     line-height: 1;
 }
@@ -425,14 +426,15 @@ header img{
 
 /* Footer */
 
-footer{
+/*footer{
     position: fixed;
     left: 5.2%;
     bottom: 3%;
-}
+}*/
 
 #footer-responsivo{
-    display: none;
+    display: block;
+    font-size: 0.8em;
 }
 
 /**/
