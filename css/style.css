@@ -506,6 +506,10 @@ div.swiper-noticia h1, div.swiper-noticia p{
         padding-bottom: 0;
     }
 
+    #pag-integrante #content-pag-integrante .content-left h1{
+	padding-bottom: 10px;
+    }
+
     /* página interna eventos e publicações */
 
     #pag-evento-pub{
