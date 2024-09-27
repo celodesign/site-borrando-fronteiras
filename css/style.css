@@ -287,6 +287,10 @@ header img{
     width: 56%;
 }
 
+#content-sobre p a{
+    word-wrap: break-word;
+}
+
 #content-sobre div{
     width: 500px;
     height: 357px;
@@ -312,7 +316,7 @@ header img{
     background-color: var(--branco);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
 }
 
 #integrantes .swiper .swiper-wrapper .swiper-slide h1, div.swiper-noticia{
@@ -422,6 +426,11 @@ div.swiper-noticia h1, div.swiper-noticia p{
         background-color: #eeeeee;  
     }
 
+    header{
+        background-color: #eeeeee;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, .3);
+    }
+
     header, main, #banner-hero, #sobre, #integrantes, #eventos-publicacoes{
         width: 100%;
     }
@@ -449,7 +458,7 @@ div.swiper-noticia h1, div.swiper-noticia p{
 
     #content-sobre div, #content-pag-integrante div+div{
         width: 100%;
-        background-size: cover;
+        background-size: contain;
         background-position: center center;
     }
 
@@ -560,7 +569,7 @@ div.swiper-noticia h1, div.swiper-noticia p{
     #content-sobre div{
         max-width: 500px;
         height: 357px;
-        background-size: cover;
+        background-size: contain;
         background-position: center center;
     }
 }
@@ -569,6 +578,12 @@ div.swiper-noticia h1, div.swiper-noticia p{
     .open{
         width: 50vw !important;
     }
+
+    #integrantes .swiper .swiper-wrapper .swiper-slide h1, div.swiper-noticia{
+        box-sizing: content-box;
+        padding: 120px 0;
+        text-align: center;
+    }   
 }
 
 @media screen and (max-width: 420px) {
