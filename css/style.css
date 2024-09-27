@@ -418,6 +418,10 @@ div.swiper-noticia h1, div.swiper-noticia p{
     background-size: contain;
 }
 
+.content-left p a{
+    word-wrap: break-word;
+}
+
 /* Responsivo */
 
 @media screen and (max-width: 1080px) {
@@ -585,7 +589,7 @@ div.swiper-noticia h1, div.swiper-noticia p{
 
     #integrantes .swiper .swiper-wrapper .swiper-slide h1, div.swiper-noticia{
         box-sizing: content-box;
-        padding: 120px 0;
+        padding: 100px 0;
         text-align: center;
     }   
 }
