@@ -89,6 +89,7 @@ header img{
     right: 0;
     transition: right .5s ease-in-out;
     border-left: 1px solid #B4B4B4;
+    background-color: #eeeeee;
 }
 
 #itens-menu{
@@ -417,7 +418,8 @@ div.swiper-noticia h1, div.swiper-noticia p{
 
 @media screen and (max-width: 1080px) {
     #area-menu{
-        right: -20vw;  
+        right: -20vw;
+        background-color: #eeeeee;  
     }
 
     header, main, #banner-hero, #sobre, #integrantes, #eventos-publicacoes{
