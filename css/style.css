@@ -43,399 +43,116 @@ html{
 }
 
 body{
-    background-image: url("../imagens/pattern-site.png");
+    display: flex;
+    background-image: url(../imagens/pattern-site.png);
     background-color: #eeeeee;
     overflow-y: hidden;
 }
 
-header{
-    display: block;
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    z-index: 999;
-}
-
-header img{
-    position: relative;
-    width: 255px;
-    z-index: 2;
+main{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 100vh;
 }
 
 .container{
-    max-width: 89.6vw;
-    margin: auto;
+    padding: 20vh 5% 60px 5%;
+    box-sizing: border-box;
 }
 
-.container-content{
-    max-width: 73.7vw;
-}
+/* header */
 
-#aside{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+header{
     position: fixed;
-    width: 8%;
-    height: 100vh;
-    right: 3%;
-    border-left: 1px solid #B4B4B4;
-    padding-left: 50px;
-    z-index: 10;
+    width: 80vw;
+    z-index: 1;
+    padding: 0.7% 5%;
+    box-sizing: border-box;
+    display: block;
 }
 
-#aside #menu-lateral{
+header img{
+    max-width: 20%;
+    height: 100px;
+}
+
+/* menu principal */
+
+#area-menu{
     display: flex;
-    flex-direction: column;
-}
-
-#aside #menu-lateral a{
-    display: flex;
-    text-decoration: none;
-    font-size: 1.4em;
-    margin-bottom: 30px;
-    transition: color .6s ease;
-}
-
-#aside #menu-lateral a svg{
-    padding-left: 10px;
-    transition: fill 0.6s ease;
-    display: none;
-}
-
-#aside #menu-lateral a svg:hover path{
-    fill: var(--lilas);
-}
-
-#aside #menu-lateral a:hover{
-    color: var(--lilas);
-}
-
-#aside #menu-lateral a:link{
-    transition: all .6s ease-in-out;
-}
-
-
-#redes{
-    position: relative;
-    margin-top: 35px;
-    z-index: 1111;
-}
-
-#redes svg:hover path{
-    fill: var(--lilas);
-    transition: fill .5s ease;
-}
-
-#celo-logo{
-    position: relative;
-    bottom: -20vh;
-}
-
-#celo-logo p, #redes p{ 
-    padding-bottom: 5px;
-    font-size: 0.8em;
-}
-
-/* home */
-
-#banner-hero{
-    position: relative;
-    max-width: 100vw;
+    align-items: center;
+    position: fixed;
+    width: 20vw;
     height: 100vh;
     z-index: 1;
+    right: 0;
+    transition: right .5s ease-in-out;
+    border-left: 1px solid #B4B4B4;
 }
 
-#banner-hero img{
+#itens-menu{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+
+#itens-menu p{
+    font-size: 0.9em;
+}
+
+#menu-borrando{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#menu-borrando a{
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#menu-borrando a:hover{
+    color: var(--lilas);
+    transition: color .3s ease;
+}
+
+#banner-hero, #sobre, #integrantes, #eventos-publicacoes{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 80%;
     height: 100vh;
+    z-index: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-#banner-hero div{
-    position: relative;
-    top: 39vh;
-    z-index: 5;
+.header-section{
+    margin-bottom: 20px;
 }
 
-#banner-hero div h1{
-    font-size: 4.2em;
+.header-section h1{
     font-family: var(--bold);
-    line-height: 1.1;
-    width: 50%;
-    color: var(--branco);
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 1.0);
+    font-size: 3em;
 }
 
-#banner-hero div p{
-    font-size: 1.5em;
-    width: 20%;
-    color: var(--padrao);
-}
-
-
-
-/* Sobre Nós */
-
-#sobre{
-    padding: 210px 0;
-}
-
-.top-internal{
-    padding-bottom: 50px;
-}
-
-.top-internal h1{
-    font-size: 4.5em;
-    font-family: var(--bold);
-    line-height: 1;
-}
-
-.top-internal h2{
+.header-section h2{
+    font-family: var(--regular);
     font-size: 1.3em;
     font-weight: 400;
 }
 
-#content-sobre{
-    display: flex;
-    gap: 20px;
+#redes svg path:hover{
+    fill: var(--lilas);
+    transition: fill .3s ease;
 }
 
-#content-sobre p{
-    padding-right: 20px;
-    text-align: justify;
-    font-size: 0.9em;
-    overflow-y: auto;
-    height: 412px;
-}
-
-#content-sobre p::-webkit-scrollbar{
-    width: 10px;
-    
-}
-
-#content-sobre p::-webkit-scrollbar-thumb{
-    background: var(--roxo);
-    border-radius: 10px;
-}
-
-#content-sobre img{
-    height: fit-content;
-}
-
-.btn{
-    display: none;
-    background-color: white;
-    padding: 1em 1em;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    position: relative;
-    top: -89px;
-    width: 30%;
-    margin: auto;
-    text-align: center;
-}
-
-
-/* Integrantes */
-
-#integrantes{
-    padding-top: 180px;
-    padding-bottom: 190px;
-    
-}
-
-.owl-prev, .owl-next{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.btns-carousel{
-    position: absolute;
-    width: 100%;
-    top: 45%;
-}
-
-.owl-next{
-    position: absolute;
-    right: 0;
-}
-
-#integrantes .owl-item img:first-child{
-    position: relative;
-    top: 0;
-    height: 82.8%;
-    max-width: max-content;
-    left: 10%;
-}
-
-#integrantes .content-integrante{
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    background: linear-gradient(360deg, black, transparent);
-    padding: 40px 0px;
-}
-
-.content-integrante h1{
-    font-family: var(--bold);
-    font-size: 1.4em;
-}
-
-.content-integrante h1, .content-integrante p{
-    color: var(--branco);
-}
-
-
-/* Eventos */
-
-#eventos{
-    padding-top: 190px;
-    padding-bottom: 105px;
-}
-
-#eventos .owl-item img{
-    width: 349px;
-    height: 455px;
-}
-
-#eventos .content-evento{
-    position: absolute;
-    text-align: center;
-    width: 81%;
-    left: 11%;
-    bottom: 9%;
-    z-index: 1111;
-}
-
-#eventos .content-evento h1{
-    text-align: left;
-    font-size: 1.2em;
-    font-family: var(--regular);
-    font-weight: 400;
-}
-
-#eventos .content-evento p{
-    width: 50%;
-    padding: 10px 0;
-    background-color: var(--roxo);
-    margin-top: 10px;
-    position: relative;
-    left: 0%;
-}
-
-#eventos .content-evento h1, #eventos .content-evento p{
-    color: var(--branco);
-}
-
-.owl-item:nth-child(1){
-    margin-right: 0 !important;
-}
-
-.conteudo-evento{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-/* Página integrante */
-
-#pagina-integrante{
-    padding-top: 210px;
-    padding-bottom: 50px;
-}
-
-#content-integrante{
-    display: flex;
-    justify-content: space-between;
-}
-
-.content-left{
-    width: 63%;
-}
-
-#header-integrante{
-    display: flex;
-    justify-content: space-between;
-}
-
-#header-integrante h1{
-    font-family: var(--bold);
-}
-
-.img-integrante-interna{
-    width: 396px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.img-integrante-interna img{
-    position: relative;
-    max-width: 100%;
-    height: auto;
-}
-
-.bg-img-integrante{
-    width: 100%;
-    height: 100%;
-    background-color: var(--lilas);
-}
-
-.content p, .conteudo-evento p{
-    overflow-y: auto;
-    height: 349px;
-}
-
-.content p::-webkit-scrollbar{
-    width: 10px;
-    
-}
-
-.content p::-webkit-scrollbar-thumb{
-    background: var(--roxo);
-    border-radius: 10px;
-}
-
-.content p::-webkit-scrollbar-track{
-    background: var(--branco);
-    border-radius: 10px;
-}
-
-#header-integrante div{
-    margin-bottom: 20px;
-}
-
-/* Página Eventos */
-
-.conteudo-evento{
-    display: flex;
-    gap: 30px;
-}
-
-.conteudo-evento p, .conteudo-evento img{
-    margin-top: 30px;
-
-}
-
-/* Footer */
-
-/*footer{
-    position: fixed;
-    left: 5.2%;
-    bottom: 3%;
-}*/
-
-#footer-responsivo{
-    display: block;
-    font-size: 0.8em;
-}
-
+/* menu responsivo */
 
 /* btn */
 .menu {
@@ -445,7 +162,9 @@ header img{
 	height: 30px;
 	margin: 25px;
     z-index: 9999;
-    right: 6vw;
+    left: 5%;
+    top: 3%;
+    transition: display .5s ease-in-out;
 }
 .menu span {
 	margin: 0 auto;
@@ -470,11 +189,9 @@ header img{
 }
 
 .main-menu{
-    display: none;
+    display: block;
 }
 /* --- btn --- */
-
-
 
 /* animation */
 
@@ -509,1058 +226,391 @@ header img{
 
 /* -- animation -- */
 
-
-.barra-responsivo{
+.menu{
     display: none;
-    width: 100%;
-    height: 140px;
-    background-color: var(--bege);
-    position: fixed;
+}
+
+.open{
+    right: 0 !important;
+}
+
+.icon-open{
+    transform: translate(-35%, -15%) !important;
+}
+
+/* Banner Hero */
+
+#banner-hero{
     top: 0;
-    left: 0;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
 }
 
-.menu-integrante-responsivo{
-    display: none;
+#banner-hero img{
+    max-width: 100%;
+    max-height:100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
+#banner-hero h1{
+    font-family: var(--bold);
+    font-size: 4em;
+    width: 50%;
+    color: var(--branco);
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 1.0);
+}
+
+/* sobre */
+
+#sobre{
+    top: 100%;
+}
+
+#sobre::-webkit-scrollbar{
+    width: 10px;    
+}
+
+#sobre::-webkit-scrollbar-thumb{
+    background: var(--roxo);
+    border-radius: 10px;
+}
+
+#content-sobre{
+    display: flex;
+    gap: 20px;
+}
+
+#content-sobre p{
+    width: 56%;
+}
+
+#content-sobre div{
+    width: 500px;
+    height: 357px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* swiper */
+
+.swiper{
+    width: 100%;
+}
+    
+
+.swiper-wrapper {
+    max-width: 100%;
+    height: 100%;
+}
+
+.img-swiper{
+    max-width: 100% !important;
+    height: 474px !important;
+    background-color: var(--branco);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#integrantes .swiper .swiper-wrapper .swiper-slide h1, div.swiper-noticia{
+    font-family: var(--bold);
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    background: linear-gradient(360deg, black, transparent);
+    color: var(--branco);
+    height: auto;
+    padding: 40px 20px;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+/* integrantes */
+
+#integrantes{
+    top: 200%;
+}
+
+
+/* eventos e publicações */
+
+#eventos-publicacoes{
+    top: 300%;
+}
+
+div.swiper-noticia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+div.swiper-noticia h1{
+    font-family: var(--bold);
+    text-shadow: 1px 3px 3px rgba(0, 0, 0, 1);
+    font-size: 1.4em;
+}
+
+div.swiper-noticia h1, div.swiper-noticia p{
+    color: var(--branco);
+}
+
+/* Página interna integrante */
+
+#pag-integrante{
+    width: 80vw;
+    height: 100vh;
+}
+
+#content-pag-integrante{
+    display: flex;
+    gap: 20px;
+}
+
+#content-pag-integrante div+div{
+    width: 70%;
+    height: 399px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-left{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 480px;
+    overflow-y: auto;
+}
+
+.content-left h1{
+    padding-bottom: 10px;
+}
+
+.content-left::-webkit-scrollbar{
+    width: 10px;
+}
+
+.content-left::-webkit-scrollbar-thumb{
+    background: var(--roxo);
+    border-radius: 10px;
+}
+
+/* Página interna eventos e publicações */
+
+#content-pag-evento-pub{
+    display: flex;
+}
+
+#content-pag-evento-pub div+div{
+    width: 70%;
+    height: 392px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
 /* Responsivo */
 
-@media screen and (max-width: 1560px){
-    #aside{
-        width: 9.5%;
+@media screen and (max-width: 1080px) {
+    #area-menu{
+        right: -20vw;  
     }
 
-}
-
-@media screen and (max-width: 1480px){
-    .content-left{
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 1400px){
-    .content-left{
-        width: 57%;
-    }
-
-    #header-integrante{
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 1360px){
-    #aside{
-        width: 10.7%;
-    }
-
-    #banner-hero img{
-        opacity: .2;
-    }
-
-    #banner-hero div h1{
-        width: 55%;
-    }
-
-    /* sobre */
-
-    #content-sobre{
-        gap: 30px;
-    }
-
-    #content-sobre img{
-        width: 40%;
-    }
-
-    #content-sobre p{
-        height: 40vh;
-        padding-right: 0;
-    }
-
-    /* Página integrante */
-
-    #header-integrante{
-        flex-direction: column;
-        width: 94%;
-    }
-
-    .content{
-        width: 94%;
-    }
-
-    .top-internal{
-        padding-bottom: 30px;
-    }
-
-    .top-internal h1{
-        font-size: 3.7em;
-    }
-
-    .content p{
-        height: 140px;
-    }
-    
-}
-
-@media screen and (max-width: 1320px){
-    #banner-hero img{
-        left: 40%;
-        height: 95%;
-    }
-}
-
-@media screen and (max-width: 1280px){
-    #banner-hero img{
-        left: 40%;
-        height: 95%;
-    }
-
-    #banner-hero div h1{
-        font-size: 3.5em;
-    }
-
-    #banner-hero div p{
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 1180px){
-    .img-integrante-interna{
-        width: 235px;
-    }
-
-    .content, #header-integrante{
+    header, main, #banner-hero, #sobre, #integrantes, #eventos-publicacoes{
         width: 100%;
     }
 
-    .content-left{
-        width: 54%;
-    }
-}
-
-
-
-@media screen and (max-width: 1080px){
-
-    .container-content{
-        max-width: 71.8vw;
-    }
-
-    #banner-hero img{
-        left: 40%;
-        height: 80%;
-    }
-
-}
-
-@media screen and (max-width: 1040px) {
-    #aside{
-        width: 14.7%;
-    }
-
-    /* sobre */
-
-    #content-sobre p{
-        width: 45%;
-    }
-}
-
-@media screen and (max-width: 990px) {
-    #banner-hero img{
-        left: 40%;
-        height: 60%;
-    }
-
-    .content-left{
-        width: 56%;
-    }
-
-}
-
-@media screen and (max-width: 900px) {
-    #aside{
-        width: 16.7%;
-    }
-}
-
-@media screen and (max-width: 830px) {
-    #aside{
-        width: 18.7%;
-    }
-
-    #banner-hero img{
-        left: 35%;
-        height: 50%;
-    }
-}
-
-@media screen and (max-width: 802px) {
-    .container-content{
-        max-width: 66.7vw;
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    header{
-        top: 3.5%
-    }
-
-    .container-content{
-        max-width: 90vw;
-    }
-
-    .main-menu-open{
-        width: 28% !important;
-        right: 0% !important;
-        transition: right .6s ease;
-        background-color: #eeeeee;
-        z-index: 11111;
-    }
-
-    .main-menu{
+    .menu{
         display: block;
-        right: 117%;
-        top: 5%;
-        z-index: 9999;
-        position: absolute;
-    }
-
-    #aside{
-        right: -18.3cap;
-        transition: right .6s ease;
-    }
-
-    #banner-hero img{
-        top: 50%;
-        left: 50%;
-        width: 100vw;
-        height: auto;
-    }
-
-    #banner-hero div{
-        top: 40vh;
-    }
-    
-    #banner-hero div h1{
-        font-size: 3em;
-        width: 80%;
-    }
-
-    #banner-hero div p{
-        width: 70%;
-    }
-
-    div.owl-item:nth-child(1){
-        margin-right: 0 !important;
-    }
-
-    /* sobre */
-
-    #sobre{
-        padding-top: 180px;
-    }
-
-    #content-sobre{
-        flex-direction: column-reverse;
-        width: 95vw;
-    }
-
-    #content-sobre img{
-        width: 95%;
-        margin-bottom: 0;
-    }
-
-    #content-sobre p{
-        height: 20vh;
-    }
-
-    .top-internal{
-        padding-bottom: 30px;
-    }
-
-    .top-internal h1{
-        font-size: 3.5em;
-    }
-
-    .top-internal h2{
-        font-size: 1.2em;
-    }
-
-    #content-sobre p{
-        width: 95%;
-        font-size: 1em;
-    }
-
-    /* eventos */
-
-    #eventos{
-        padding-top: 145px;
-        padding-bottom: 255px;
-    }
-
-    /* integrantes */
-
-    #integrantes{
-        padding-top: 275px;
-        padding-bottom: 176px;
-    }
-
-    /* footer */
-
-    footer{
-        display: none;
-    }
-
-    /* pagina interna integrante */
-
-    #pagina-integrante{
-        padding-top: 240px;
-        padding-bottom: 30px;
-    }
-
-    #content-integrante{
-        display: flex;
-        gap: 20px;
-        flex-direction: column-reverse;
-    }
-
-    .content-left{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #header-integrante{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #header-integrante div{
-        padding-bottom: 10px;
-        width: 89.9vw;
-    }
-
-    .menu-integrante{
-        display: flex;
-        width: 92vw;
-        flex-wrap: wrap;
-        flex-direction: column;
-        padding: 10px 0;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .content p, .conteudo-evento p{
-        width: 92vw;
-        height: 300px;
-        overflow-y: visible;
-    }
-    
-    .menu-integrante a:first-child{
-        padding-left: 0;
-    }
-
-    .bg-img-integrante{
-        width: 92vw;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-        bottom: 0;
-    }
-
-    .img-integrante-interna{
-        width: 100%;
-        z-index: -1;
-    }
-
-    #header-integrante h1{
-        font-size: 2.5em;
-    }
-    
-    #header-integrante p{
-        font-size: 1em;
-    }
-
-    /* Página interna eventos */
-
-    .conteudo-evento{
-        flex-direction: column-reverse;
-        gap: 0;
-    }
-
-    .conteudo-evento p{
-        font-size: 1em;
-        overflow-y: visible;
-        height: 100%;
-        width: 89.8vw;
-    }
-
-    .barra-responsivo{
-        display: block;
-        height: 180px;
-    }
-
-}
-
-@media screen and (max-width: 630px){
-    .main-menu{
-        right: 125%;
-    }
-
-    /* página integrante */
-
-    .img-integrante-interna{
-        height: auto;
-        z-index: -1;
-    }
-
-
-    .content p, .conteudo-evento p{
-        width: 79.174vw;
-    }
-    
-}
-
-@media screen and (max-width: 560px){
-    .main-menu{
-        right: 135%;
-    }
-}
-
-@media screen and (max-width: 480px){
-
-    .container-content{
-        width: 90vw;
-    }
-
-    .main-menu{
-        right: 140%;
-        top: 5%;
-    }
-
-    /* sobre */
-
-    #content-sobre img{
-        margin-bottom: 0;
-    }
-
-    #content-sobre p{
-        width: 90vw;
-    }
-
-    /* página integrante */
-
-    #integrantes{
-        padding-top: 155px;
-    }
-
-    .content p, .conteudo-evento p{
-        height: 190px;
-    }
-
-    .img-integrante-interna{
-        position: relative;
-        width: 150px;
-        right: 0;
-    }
-
-    #content-integrante{
-        flex-direction: column-reverse;
-    }
-    #header-integrante div, #content-sub-menu, .img-integrante-interna{
-        width: 89.5vw;
-    }
-
-    .menu-integrante{
-        display: none;
-        width: 89.5vw;
-        font-size: 1.3em;
-        gap: 10px;
-        padding: 20px 0;
-    }
-
-    #banner-hero div h1{
-        font-size: 2.5em;
-        width: 80%;
-    }
-
-    #banner-hero div p{
-        width: 80%;
-    }
-
-    #banner-hero div{
-        top: 35vh;
-    }
-
-    #integrantes .owl-item img:first-child{
-        height: 62.5%;
-    }
-
-    #integrantes .content-integrante{
-        bottom: 26.5%;
-    }
-
-    .content p{
-        width: 89.174vw;
-        overflow-y: visible;
-    }
-
-    .bg-img-integrante{
-        height: 100%;
-    }
-
-
-    /* Página interna eventos */
-
-    #header-integrante div h1{
-        font-size: 1.2em;
-    }
-
-    #header-integrante div p{
-        font-size: 0.9em;
-    }
-
-    .conteudo-evento{
-        flex-direction: column-reverse;
-        gap: 0;
-    }
-
-    .conteudo-evento img{
-        max-width: 100%;
-    }
-
-    .conteudo-evento p{
-        width: 89.174vw;
-        overflow-y: visible;
-        height: auto;
-        font-size: 1em;
-    }
-    
-    .barra-responsivo{
-        display: block !important;
-    }
-
-
-    /* -- sub menu responsivo -- */
-
-    .menu-integrante-responsivo{
-        position: fixed;
-        display: flex;
-        flex-direction: column-reverse;
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        background-color: var(--roxo);
-        text-align: center;
-        align-items: center;
-        z-index: 1;
-        right: 9vw;
-        bottom: 6vh;
-        -webkit-transition: .3s ease;
-    }
-
-    .menu-integrante-responsivo img{
-        width: 35px;
-        height: 35px;
-        position: relative;
-        bottom: 7px;
-        -webkit-transition: .3s ease;
-    }
-
-    .menu-integrante-responsivo .sub-menu{
-        display: flex !important;
-        position: absolute;
-        flex-direction: column;
-        gap: 20px;
-        bottom: 0;
-        visibility: hidden;
-        opacity: 0;
-        -webkit-transition: .3s ease;
-        z-index: -1;
-    }
-
-    .menu-integrante-responsivo .sub-menu a{
-        margin-bottom: -10px;
-        -webkit-transition: .3s ease;
-        z-index: -1;
-        max-width: 40%;
-        height: 100%;
-        background-color: var(--roxo);
-        color: var(--branco);
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        position: relative;
-        left: 70px;
-        text-decoration: none;
-        border-radius: 20px;
+        transform: translate(-350%, -15%);
     }
 
     .open{
-        display: none !important;
-        bottom: 60px !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        -webkit-transition: .3s ease;
-        z-index: 11111;
-    }
-
-    .open-second{
-        margin-bottom: 10px !important;
-        -webkit-transition: .3s ease;
-    }
-
-    .content{
-        margin-top: 7px;
-    }
-}
-
-@media screen and (max-width: 420px){ /* display galaxy note 10 413px */
-    .main-menu{
-        right: 165%;
-        top: 4%;
+        width: 30vw !important;
     }
 
     header img{
-        width: 220px;
+        max-width: 25%
     }
 
-    #aside{
-        right: -19cap;
-        transition: right .6s ease;
-        z-index: 11111;
+    #banner-hero h1{
+        width: 70%;
     }
 
-    .main-menu-open{
-        width: 75% !important;
+    #content-sobre p{
+        width: 100%;
     }
 
-    #banner-hero div h1{
-        font-size: 3em;
-        width: 95%;
-    }
-
-    /* Banner Hero */
-
-    #banner-hero div{
-        top: 57vw;
-    }
-
-    #banner-hero div h1{
-        font-size: 2.5em;
-    }
-
-    #banner-hero div p{
-        width: 85%;
+    #content-sobre div, #content-pag-integrante div+div{
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
     }
 
     /* sobre */
-
-    .container-content{
-        max-width: 90vw;
-    }
-
-    #sobre{
-        padding-top: 155px;
-        padding-bottom: 100px;
-    }
 
     #content-sobre{
         flex-direction: column-reverse;
     }
 
-    .top-internal{
-        padding-bottom: 20px;
+    /* página interna integrantes */
+
+    #pag-integrante{
+        width: 100vw;
+        overflow-y: auto;
     }
 
-    .top-internal h1{
-        font-size: 2.5em;
+    #pag-integrante::-webkit-scrollbar{
+        width: 10px;
     }
 
-    .top-internal h2{
-        font-size: 0.8em;
-        margin-top: 5px;
+    #pag-integrante::-webkit-scrollbar-thumb{
+        background: var(--roxo);
+        border-radius: 10px;
     }
 
-    #content-sobre p{
-        display: block;
-        width: 90vw;
-        height: 23vh;
-        padding-right: 0;
+    #content-pag-integrante, #content-pag-evento-pub{
+        flex-direction: column-reverse;
+        background-position: center center;
     }
 
-    #content-sobre img{
-        width: 90vw;
+    #content-pag-integrante div+div, #content-pag-evento-pub div+div{
+        width: 100%;
+        background-size: cover;
+        background-position: center top;
+        margin-bottom: 15px;
+    }
+
+    .content-left{
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .content-left h1{
         padding-bottom: 0;
     }
 
-    /* integrantes */
+    /* página interna eventos e publicações */
 
-    #integrantes{
-        padding-top: 190px;
+    #pag-evento-pub{
+        overflow-y: auto;
     }
 
-    .owl-item{
-        position: relative;
-        /* left: 3.1% !important; */
+    #pag-evento-pub::-webkit-scrollbar{
+        width: 10px;
     }
 
-    .owl-item:first-child{
-        /* margin-right: 10px; */
-        /* margin-left: 10.5px; */
-        /* left: 0% !important; */
+    #pag-evento-pub::-webkit-scrollbar-thumb{
+        background: var(--roxo);
+        border-radius: 10px;
     }
 
-    .height-item{
-        height: 302px !important;
-    }
-
-    #integrantes .owl-item img:first-child{
-        left: 19%;
-    }
-
-    #integrantes .content-integrante{
-        bottom: 4.5%;
-    }
-
-    .bg-item{
-        width: 326px !important;
-        height: 365px !important;
-    }
-
-    /* página integrante */
-
-    #pagina-integrante{
-        padding-top: 190px;
-    }
-
-    .content p{
-        width: 89.174vw;
-        overflow-y: visible;
-    }
-
-    .menu-integrante-responsivo{
-        right: 9vw;
-        bottom: 6vh;
-    }
-
-    .menu-integrante-responsivo .sub-menu a{
-        left: 63px;
-    }
-
-    .bg-img-integrante{
-        height: 100%;
-    }
-
-    /* eventos */
-
-    #eventos{
-        padding-top: 170px;
-    }
-
-    .owl-stage{
-        display: flex;
-        justify-content: space-around;
-    }
-
-    #eventos .owl-item img{
-        height: 365px !important;
-    }
-
-    .img-integrante-interna img{
-        left: 50%;
-    }
-
-    /* Página interna eventos */
-
-    #header-integrante div h1{
-        font-size: 1.2em;
-    }
-
-    #header-integrante div p{
-        font-size: 0.9em;
-    }
-
-    .conteudo-evento{
-        flex-direction: column-reverse;
-        gap: 0;
-    }
-
-    .conteudo-evento img{
-        max-width: 100%;
-    }
-
-    .conteudo-evento p{
-        width: 89.6vw;
-        overflow-y: visible;
-        height: auto;
-        font-size: 1em;
-    }
-    
-    .barra-responsivo{
-        display: block !important;
-        height: 150px;
-    }
-
-    /* footer */
-
-    footer{
-        bottom: 2%;
-        left: 15%;
-        display: none;
-    }
-
-    footer p{
-        font-size: 0.8em;
-        width: 69vw;
-        text-align: center;
-    }
-
-    #celo-logo{
-        bottom: -12vh;
-    }
-
-    #footer-responsivo{
-        display: block;
-        position: relative;
-        bottom: -15vh;
-    }
-
-    #footer-responsivo p{
-        font-size: 0.8em;
+    .header-post{
+        padding-bottom: 20px;
     }
 
 }
 
-@media screen and (max-width: 320px){
-
-    header{
-        top: 2%;
-        left: 9%;
+@media screen and (max-width: 768px) {
+    .open{
+        width: 35vw !important;
     }
 
     header img{
-        width: 185px;
-        margin-top: 20px;
+        max-width: 30% !important;
     }
 
-    .main-menu{
-        right: 190%;
-        top: 6.5%;
+    #banner-hero h1{
+        font-size: 3.5em;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .open{
+        width: 45vw !important;
     }
 
-    .main-menu::after{
-        right: 67% !important;
+    header img{
+        max-width: 40% !important;
     }
 
-    #banner-hero div{
-        top: 170px;
-    }
-
-    #banner-hero div h1{
+    #banner-hero h1{
         width: 100%;
-        margin-bottom: 10px;
+        font-size: 3em;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+    #integrantes .swiper .swiper-wrapper .swiper-slide h1, div.swiper-noticia{
+        box-sizing: content-box;
+        padding: 70px 0;
+        text-align: center;
+    }
+
+    #content-sobre div{
+        max-width: 500px;
+        height: 357px;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .open{
+        width: 50vw !important;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    header img{
+        max-width: 55% !important;
+    }
+
+    div.swiper-noticia h1{
+        width: 90%;
+    }
+
+    #banner-hero h1{
+        width: 100%;
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .open{
+        width: 65vw !important;
+    }
+
+    #integrantes .swiper .swiper-wrapper .swiper-slide h1, div.swiper-noticia{
+        box-sizing: content-box;
+        padding: 110px 0;
+    }
+
+    #banner-hero h1{
+        width: 100%;
         font-size: 2em;
     }
 
-    #banner-hero div p{
+    #header-section h1{
+        font-size: 2em;
+    }
+
+    #header-section h2{
         font-size: 1em;
-    }
-
-    #aside{
-        height: 100%;
-    }
-
-    #aside #menu-lateral{
-        margin-top: 60px;
-        margin-bottom: 0;
-    }
-
-    #aside #menu-lateral a{
-        font-size: 1.2em;
-        line-height: 0.6;
-    }
-
-    #redes{
-        margin-top: 0;
-    }
-    
-    #celo-logo{
-        bottom: -4vh;
-    }
-
-    #footer-responsivo{
-        bottom: -6vh;
-        width: 80%;
     }
 
     /* sobre */
 
-    #sobre{
-        padding-top: 145px;
-    }
-
-    .btn{
-        display: block;
-    }
-
-    #open-modal div p{
-        display: block !important;
-        width: 100%;
-        height: 70vh;
-        font-size: 1em;
-    }
-
-    /* integrantes */
-
-    #integrantes{
-        padding-top: 130px;
-    }
-
-    .bg-item{
-        width: 280px !important;
-        height: 238px !important;
-    }
-
-    .height-item{
-        height: 197px !important;
-    }
-
-    #integrantes .owl-item img:first-child{
-        left: 27%;
-    }
-
-    .content-integrante h1{
-        font-size: 1em;
-        padding-right: 10px;
-    }
-
-    .content-integrante p{
-        font-size: 0.9em;
-    }
-
-    #integrantes .content-integrante{
-        display: flex;
-        align-items: center;
-        margin-bottom: 0;
-        left: 27%;
-    }
-
-    .content p{
-        font-size: 0.9em;
-    }
-
-
-    /* eventos */
-
-    #eventos{
-        padding-top: 130px;
-    }
-
-    #eventos .owl-item img{
-        height: 230px !important;
-    }
-
-    #eventos .content-evento h1{
-        width: 75%;
-        position: relative;
-        left: 18%;
-        font-size: 1em;
-    }
-
-    #eventos .content-evento p{
-        left: 18%;
-        font-size: 0.8em;
-    }
-
-    #eventos .content-evento{
-        bottom: 22%;
-    }
-
-    /* página integrante */
-
-    #pagina-integrante{
-        padding-top: 170px;
-        padding-bottom: 30px;
-    }
-
-    .menu-integrante-responsivo{
-        width: 35px;
-        height: 35px;
-        right: 10vw;
-        bottom: 11vh;
-    }
-
-    .menu-integrante-responsivo .sub-menu a{
-        font-size: 0.9em;
-        text-decoration: none;
-        left: 40px;
-        border-radius: 20px;
-        padding: 0 5px;
-    }
-
-    .menu-integrante-responsivo img{
-        width: 20px;
-        height: 20px;
-    }
-
-    #header-integrante div{
-        padding-bottom: 0;
-    }
-
-    .img-integrante-interna img{
-        left: 50%;
-    }
-    
-    #content-integrante .content p{
-        height: 165px;
-    }
-
-    .content p{
-        width: 88.174vw;
-        overflow-y: visible;
-    }
-
-    /* Página interna eventos */
-
-    #header-integrante div h1{
-        font-size: 1.2em;
-    }
-
-    #header-integrante div p{
-        font-size: 0.9em;
-    }
-
-    .conteudo-evento{
-        flex-direction: column-reverse;
-        gap: 0;
-    }
-
-    .conteudo-evento img{
-        max-width: 100%;
-    }
-
-    .conteudo-evento p{
-        overflow-y: visible;
-        height: auto;
-        font-size: 1em;
-    }
-    
-    .barra-responsivo{
-        display: block !important;
-        height: 140px;
-    }
-
-    #content-sub-menu{
-        width: 100%;
-    }
-
-    .conteudo-evento p{
-        width: 100%;
+    #content-sobre p a{
+        word-wrap: break-word;
     }
 
 }
-
-
