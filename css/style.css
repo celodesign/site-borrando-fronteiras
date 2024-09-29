@@ -312,7 +312,7 @@ header img{
 
 .img-swiper{
     max-width: 100% !important;
-    height: 474px !important;
+    height: 474px;
     background-color: var(--branco);
     background-size: cover;
     background-repeat: no-repeat;
