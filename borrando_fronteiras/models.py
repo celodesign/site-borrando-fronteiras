@@ -28,7 +28,7 @@ class SobreNos(models.Model):
 
 class Integrantes(models.Model):
     nome_integrante = models.CharField(max_length=100, verbose_name='Nome do Integrante')
-    slug = models.SlugField(max_length=255, unique=True, blank=True, verbose_name='Slug')
+    slug = models.SlugField(max_length=255, unique=True, verbose_name='Slug')
     imagem = models.ImageField(null=True, blank=True, upload_to='integrantes', verbose_name='Imagem', help_text='Tamanho recomendado da imagem: 349x474px')
     conteudo = models.TextField(verbose_name='Conteúdo')
     
@@ -44,7 +44,7 @@ class Integrantes(models.Model):
 
 class EventosPublicacoes(models.Model):
     nome_post = models.CharField(max_length=255, verbose_name='Nome do Post')
-    slug = models.SlugField(max_length=255, unique=True, blank=True, verbose_name='Slug')
+    slug = models.SlugField(max_length=255, unique=True, verbose_name='Slug')
     imagem = models.ImageField(null=True, blank=True, upload_to='eventos_publicacoes', verbose_name='Imagem', help_text='Tamanho recomendado da imagem: 530x392px')
     conteudo = models.TextField(verbose_name='Conteúdo')
     autor = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Autor')
