@@ -25,10 +25,10 @@
   <div id="itens-menu">
       
       <nav id="menu-borrando">
-          <a onclick="meuShowItens()" href="http://127.0.0.1:8000/#banner-hero">Home</a>
-          <a onclick="meuShowItens()" href="http://127.0.0.1:8000/#sobre">Sobre Nós</a>
-          <a onclick="meuShowItens()" href="http://127.0.0.1:8000/#integrantes">Integrantes</a>
-          <a onclick="meuShowItens()" href="http://127.0.0.1:8000/#eventos-publicacoes">Eventos e Publicações</a>
+          <a onclick="meuShowItens()" href="{% url 'home' %}">Home</a>
+          <a onclick="meuShowItens()" href="{% url 'home' %}#sobre">Sobre Nós</a>
+          <a onclick="meuShowItens()" href="{% url 'home' %}#integrantes">Integrantes</a>
+          <a onclick="meuShowItens()" href="{% url 'home' %}#eventos-publicacoes">Eventos e Publicações</a>
       </nav>
       <div id="redes">
           <p>Siga-nos</p>
@@ -45,7 +45,7 @@
       </div>
       <div id="logo-celo">
           <p>Feito por</p>
-          <a href="https://celodesign.pythonanywhere.com/" target="_blank"><img src="{% static 'imagens/logo-celo-design.svg' %}" alt=""></a>
+          <a href="https://www.celodesign.com.br" target="_blank"><img src="{% static 'imagens/logo-celo-design.svg' %}" alt=""></a>
       </div>
       <footer>
           <p>Borrando Fronteiras 2024. Todos os direitos reservados</p>
