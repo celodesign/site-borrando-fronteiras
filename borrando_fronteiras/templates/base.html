@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'css/swiper-bundle.min.css' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'imagens/favicon.ico' %}" type="image/x-icon">
+
+    <title>{% block title %}Borrando Fronteiras{% endblock %}</title>
+</head>
+<body onload="ajustesResponsivo()">
+    <main>
+        <header>
+            <a href="{% url 'home' %}"><img src="{% static 'imagens/logo-borrando.svg' %}" alt="logo borrando"></a>
+        </header>
+        {% block content %}{% endblock %}
+        {% block menu_home %}{% endblock %}
+        {% block menu_internas %}{% endblock %}
+    </main>
+</body>
+
+<script src="{% static 'js/ajustes-responsivo.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/menu-responsivo.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+<script type="text/javascript">
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  allowSlideNext: true,
+  autoHeight: true,      
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },    
+  breakpoints: {
+        600: {
+          slidesPerView: 1,
+          spaceBetween: 5,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1780: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1920: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        },
+      },
+});
+
+</script>
+</html>

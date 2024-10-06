@@ -283,8 +283,9 @@ header img{
     gap: 20px;
 }
 
-#content-sobre p{
+#content-sobre div.content-posts{
     width: 56%;
+    height: auto;
 }
 
 #content-sobre p a{
@@ -295,7 +296,7 @@ header img{
     width: 500px;
     height: 357px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 /* swiper */
@@ -415,11 +416,15 @@ div.swiper-noticia h1, div.swiper-noticia p{
     width: 70%;
     height: 392px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .content-left p a{
     word-wrap: break-word;
+}
+
+.header-post{
+    margin-bottom: 20px;
 }
 
 /* Responsivo */

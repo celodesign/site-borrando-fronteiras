@@ -1,0 +1,1 @@
+web: gunicorn site_borrando.wsgi --preload --log-file -

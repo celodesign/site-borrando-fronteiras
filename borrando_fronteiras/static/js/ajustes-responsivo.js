@@ -5,5 +5,4 @@ function ajustesResponsivo(){
     if(window.innerWidth == 1024 & window.innerHeight == 600){
       $('.img-swiper').css({'height': alturaBorrando});
     }
-    console.log(window.innerWidth);
   };
